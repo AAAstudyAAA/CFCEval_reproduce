@@ -1,0 +1,978 @@
+Prompt_Name,CVE_ID,CWE_ID,repo_url,commit_ID,file_name,patch-,patch+,line_num,clickable_commit
+PyVul4LLMSec_1,CVE-2023-28836,CWE-79,https://github.com/wagtail/wagtail,ff806ab173a504395fdfb3139eb0a29444ab4b91,wagtail/contrib/modeladmin/views.py,"            return mark_safe(
+                '<a href=""%s"">%s <span class=""meta"">(%s, %s)</span></a>'
+                % (
+                    document.url,
+                    document.title,
+                    document.file_extension.upper(),
+                    filesizeformat(document.file.size),
+                )
+         ","   return format_html(
+                '<a href=""{}"">{} <span class=""meta"">({}, {})</span></a>',
+                document.url,
+                document.title,
+                document.file_extension.upper(),
+                filesizeformat(document.file.size),",,"=HYPERLINK(""https://github.com/wagtail/wagtail/commit/ff806ab173a504395fdfb3139eb0a29444ab4b91"",""wagtail/contrib/modeladmin/views.py"")"
+PyVul4LLMSec_2,CVE-2023-28836,CWE-79,https://github.com/wagtail/wagtail,5be2b1ed55fd7259dfdf2c82e7701dba407b8b62,wagtail/contrib/modeladmin/forms.py," return mark_safe('<span class=""icon icon-arrow-right""></span>'.join(bits))","return "" | "".join(bits)",,"=HYPERLINK(""https://github.com/wagtail/wagtail/commit/5be2b1ed55fd7259dfdf2c82e7701dba407b8b62"",""wagtail/contrib/modeladmin/forms.py"")"
+PyVul4LLMSec_3,CVE-2023-27494,CWE-79,https://github.com/streamlit/streamlit,afcf880c60e5d7538936cc2d9721b9e1bc02b075,lib/streamlit/components/v1/components.py,"   self.write(f""{path} not found"")","self.write(""not found"")",,"=HYPERLINK(""https://github.com/streamlit/streamlit/commit/afcf880c60e5d7538936cc2d9721b9e1bc02b075"",""lib/streamlit/components/v1/components.py"")"
+PyVul4LLMSec_4,CVE-2023-27494,CWE-79,https://github.com/streamlit/streamlit,afcf880c60e5d7538936cc2d9721b9e1bc02b075,lib/streamlit/components/v1/components.py," self.write(f""{path} read error: {e}"")"," LOGGER.error(f""ComponentRequestHandler: GET {path} read error"", exc_info=e)
+            self.write(""read error"")",,"=HYPERLINK(""https://github.com/streamlit/streamlit/commit/afcf880c60e5d7538936cc2d9721b9e1bc02b075"",""lib/streamlit/components/v1/components.py"")"
+PyVul4LLMSec_5,CVE-2023-27494,CWE-79,https://github.com/streamlit/streamlit,afcf880c60e5d7538936cc2d9721b9e1bc02b075,lib/streamlit/server/routes.py," raise tornado.web.HTTPError(404, ""%s not found"", absolute_path)","raise tornado.web.HTTPError(404, ""not found"")",,"=HYPERLINK(""https://github.com/streamlit/streamlit/commit/afcf880c60e5d7538936cc2d9721b9e1bc02b075"",""lib/streamlit/server/routes.py"")"
+PyVul4LLMSec_6,CVE-2023-22475,CWE-79,https://github.com/thinkst/canarytokens,fb612906f2217bbb8863199694891d16e20bad3e,httpd_site.py,  template = env.get_template('generate_new.html'), template = unsafe_env.get_template('generate_new.html'),,"=HYPERLINK(""https://github.com/thinkst/canarytokens/commit/fb612906f2217bbb8863199694891d16e20bad3e"",""httpd_site.py"")"
+PyVul4LLMSec_7,CVE-2023-22475,CWE-79,https://github.com/thinkst/canarytokens,fb612906f2217bbb8863199694891d16e20bad3e,httpd_site.py,template = env.get_template('error.html'), template = unsafe_env.get_template('error.html'),,"=HYPERLINK(""https://github.com/thinkst/canarytokens/commit/fb612906f2217bbb8863199694891d16e20bad3e"",""httpd_site.py"")"
+PyVul4LLMSec_8,CVE-2023-22475,CWE-79,https://github.com/thinkst/canarytokens,fb612906f2217bbb8863199694891d16e20bad3e,httpd_site.py,  template = env.get_template('manage_new.html'),template = unsafe_env.get_template('manage_new.html'),,"=HYPERLINK(""https://github.com/thinkst/canarytokens/commit/fb612906f2217bbb8863199694891d16e20bad3e"",""httpd_site.py"")"
+PyVul4LLMSec_9,CVE-2023-22475,CWE-79,https://github.com/thinkst/canarytokens,fb612906f2217bbb8863199694891d16e20bad3e,httpd_site.py,   template = env.get_template('manage.html'),  template = unsafe_env.get_template('manage.html'),,"=HYPERLINK(""https://github.com/thinkst/canarytokens/commit/fb612906f2217bbb8863199694891d16e20bad3e"",""httpd_site.py"")"
+PyVul4LLMSec_10,CVE-2023-22475,CWE-79,https://github.com/thinkst/canarytokens,fb612906f2217bbb8863199694891d16e20bad3e,httpd_site.py, template = env.get_template('manage.html'), template = unsafe_env.get_template('manage.html'),,"=HYPERLINK(""https://github.com/thinkst/canarytokens/commit/fb612906f2217bbb8863199694891d16e20bad3e"",""httpd_site.py"")"
+PyVul4LLMSec_11,CVE-2023-22475,CWE-79,https://github.com/thinkst/canarytokens,fb612906f2217bbb8863199694891d16e20bad3e,httpd_site.py, template = env.get_template('manage.html'), template = unsafe_env.get_template('manage.html'),,"=HYPERLINK(""https://github.com/thinkst/canarytokens/commit/fb612906f2217bbb8863199694891d16e20bad3e"",""httpd_site.py"")"
+PyVul4LLMSec_12,CVE-2023-22475,CWE-79,https://github.com/thinkst/canarytokens,fb612906f2217bbb8863199694891d16e20bad3e,httpd_site.py,  template = env.get_template('legal.html'),template = unsafe_env.get_template('legal.html'),,"=HYPERLINK(""https://github.com/thinkst/canarytokens/commit/fb612906f2217bbb8863199694891d16e20bad3e"",""httpd_site.py"")"
+PyVul4LLMSec_13,CVE-2022-4527,CWE-79,https://github.com/collective/collective.task,1aac7f83fa2c2b41d59ba02748912953461f3fac,src/collective/task/browser/table.py,  return member.getUser().getProperty('fullname').decode('utf-8'),  return escape(member.getUser().getProperty('fullname').decode('utf-8')),,"=HYPERLINK(""https://github.com/collective/collective.task/commit/1aac7f83fa2c2b41d59ba02748912953461f3fac"",""src/collective/task/browser/table.py"")"
+PyVul4LLMSec_14,CVE-2022-4527,CWE-79,https://github.com/collective/collective.task,1aac7f83fa2c2b41d59ba02748912953461f3fac,src/collective/task/browser/table.py, return group.getProperty('title').decode('utf-8'), return escape(group.getProperty('title').decode('utf-8')),,"=HYPERLINK(""https://github.com/collective/collective.task/commit/1aac7f83fa2c2b41d59ba02748912953461f3fac"",""src/collective/task/browser/table.py"")"
+PyVul4LLMSec_15,CVE-2022-4527,CWE-79,https://github.com/collective/collective.task,1aac7f83fa2c2b41d59ba02748912953461f3fac,src/collective/task/browser/table.py," return translate(PMF(state_title), context=self.request)"," return escape(translate(PMF(state_title), context=self.request))",,"=HYPERLINK(""https://github.com/collective/collective.task/commit/1aac7f83fa2c2b41d59ba02748912953461f3fac"",""src/collective/task/browser/table.py"")"
+PyVul4LLMSec_16,CVE-2022-4495,CWE-79,https://github.com/collective/collective.dms.basecontent,6c4d616fcc771822a14ebae5e23f3f6d96d134bd,src/collective/dms/basecontent/browser/column.py,"principals.append(user.getProperty('fullname', None) or user.getId())","   principals.append(escape(user.getProperty('fullname', None)) or user.getId())",,"=HYPERLINK(""https://github.com/collective/collective.dms.basecontent/commit/6c4d616fcc771822a14ebae5e23f3f6d96d134bd"",""src/collective/dms/basecontent/browser/column.py"")"
+PyVul4LLMSec_17,CVE-2022-4495,CWE-79,https://github.com/collective/collective.dms.basecontent,6c4d616fcc771822a14ebae5e23f3f6d96d134bd,src/collective/dms/basecontent/browser/column.py," principals.append(group.getProperty('title', None) or group.getId())"," principals.append(escape(group.getProperty('title', None)) or group.getId())",,"=HYPERLINK(""https://github.com/collective/collective.dms.basecontent/commit/6c4d616fcc771822a14ebae5e23f3f6d96d134bd"",""src/collective/dms/basecontent/browser/column.py"")"
+PyVul4LLMSec_18,CVE-2022-4495,CWE-79,https://github.com/collective/collective.dms.basecontent,6c4d616fcc771822a14ebae5e23f3f6d96d134bd,src/collective/dms/basecontent/browser/column.py," if isinstance(title, unicode):
+            return title
+        else:
+            return unicode(title, 'utf-8', 'ignore')", return escape(safe_unicode(title)),,"=HYPERLINK(""https://github.com/collective/collective.dms.basecontent/commit/6c4d616fcc771822a14ebae5e23f3f6d96d134bd"",""src/collective/dms/basecontent/browser/column.py"")"
+PyVul4LLMSec_19,CVE-2022-46151,CWE-79,https://github.com/pinterest/querybook,88a7f10495bf5ed1a556ade51a2f2794e403c063,querybook/server/app/auth/oauth_auth.py," return f""<h1>Error: {request.args.get('error')}</h1>"""," return f""<h1>Error: { Markup.escape(request.args.get('error')) }</h1>""",,"=HYPERLINK(""https://github.com/pinterest/querybook/commit/88a7f10495bf5ed1a556ade51a2f2794e403c063"",""querybook/server/app/auth/oauth_auth.py"")"
+PyVul4LLMSec_20,CVE-2022-46151,CWE-79,https://github.com/pinterest/querybook,88a7f10495bf5ed1a556ade51a2f2794e403c063,querybook/server/app/auth/okta_auth.py,"  return f""<h1>Error: {request.args.get('error')}</h1>"""," return f""<h1>Error: { Markup.escape(request.args.get('error')) }</h1>""",,"=HYPERLINK(""https://github.com/pinterest/querybook/commit/88a7f10495bf5ed1a556ade51a2f2794e403c063"",""querybook/server/app/auth/okta_auth.py"")"
+PyVul4LLMSec_21,CVE-2022-46147,CWE-79,https://github.com/openedx/xblock-drag-and-drop-v2,68887d1b4a44325d2de7573d450e41129ba98b1a,drag_and_drop_v2/drag_and_drop_v2.py,," item['displayName'] = sanitize_html(item.get('displayName', ''))",,"=HYPERLINK(""https://github.com/openedx/xblock-drag-and-drop-v2/commit/68887d1b4a44325d2de7573d450e41129ba98b1a"",""drag_and_drop_v2/drag_and_drop_v2.py"")"
+PyVul4LLMSec_22,CVE-2022-46147,CWE-79,https://github.com/openedx/xblock-drag-and-drop-v2,68887d1b4a44325d2de7573d450e41129ba98b1a,drag_and_drop_v2/drag_and_drop_v2.py,"""display_name"": self.display_name,","""display_name"": sanitize_html(self.display_name),",,"=HYPERLINK(""https://github.com/openedx/xblock-drag-and-drop-v2/commit/68887d1b4a44325d2de7573d450e41129ba98b1a"",""drag_and_drop_v2/drag_and_drop_v2.py"")"
+PyVul4LLMSec_23,CVE-2022-46147,CWE-79,https://github.com/openedx/xblock-drag-and-drop-v2,68887d1b4a44325d2de7573d450e41129ba98b1a,drag_and_drop_v2/drag_and_drop_v2.py," ""title"": self.display_name,","  ""title"": sanitize_html(self.display_name),",,"=HYPERLINK(""https://github.com/openedx/xblock-drag-and-drop-v2/commit/68887d1b4a44325d2de7573d450e41129ba98b1a"",""drag_and_drop_v2/drag_and_drop_v2.py"")"
+PyVul4LLMSec_24,CVE-2022-46147,CWE-79,https://github.com/openedx/xblock-drag-and-drop-v2,68887d1b4a44325d2de7573d450e41129ba98b1a,drag_and_drop_v2/drag_and_drop_v2.py,"""problem_text"": self.question_text,","""problem_text"": sanitize_html(self.question_text),",,"=HYPERLINK(""https://github.com/openedx/xblock-drag-and-drop-v2/commit/68887d1b4a44325d2de7573d450e41129ba98b1a"",""drag_and_drop_v2/drag_and_drop_v2.py"")"
+PyVul4LLMSec_25,CVE-2022-46147,CWE-79,https://github.com/openedx/xblock-drag-and-drop-v2,68887d1b4a44325d2de7573d450e41129ba98b1a,drag_and_drop_v2/drag_and_drop_v2.py,  answer['explanation'] = explanation,            answer['explanation'] = sanitize_html(explanation),,"=HYPERLINK(""https://github.com/openedx/xblock-drag-and-drop-v2/commit/68887d1b4a44325d2de7573d450e41129ba98b1a"",""drag_and_drop_v2/drag_and_drop_v2.py"")"
+PyVul4LLMSec_26,CVE-2022-46147,CWE-79,https://github.com/openedx/xblock-drag-and-drop-v2,68887d1b4a44325d2de7573d450e41129ba98b1a,drag_and_drop_v2/drag_and_drop_v2.py,"    {""message"": msg.message, ""message_class"": msg.message_class}","  {""message"": sanitize_html(msg.message), ""message_class"": msg.message_class}",,"=HYPERLINK(""https://github.com/openedx/xblock-drag-and-drop-v2/commit/68887d1b4a44325d2de7573d450e41129ba98b1a"",""drag_and_drop_v2/drag_and_drop_v2.py"")"
+PyVul4LLMSec_27,CVE-2022-46147,CWE-79,https://github.com/openedx/xblock-drag-and-drop-v2,68887d1b4a44325d2de7573d450e41129ba98b1a,drag_and_drop_v2/drag_and_drop_v2.py,"  return [migrator.apply_zone_migrations(zone) for zone in self.data.get('zones', [])]"," migrated_zones = []
+
+        for zone in self.data.get('zones', []):
+            result = migrator.apply_zone_migrations(zone)
+            result['title'] = sanitize_html(result.get('title', ''))
+            migrated_zones.append(result)
+
+        return migrated_zones",,"=HYPERLINK(""https://github.com/openedx/xblock-drag-and-drop-v2/commit/68887d1b4a44325d2de7573d450e41129ba98b1a"",""drag_and_drop_v2/drag_and_drop_v2.py"")"
+PyVul4LLMSec_28,CVE-2022-46147,CWE-79,https://github.com/openedx/xblock-drag-and-drop-v2,68887d1b4a44325d2de7573d450e41129ba98b1a,drag_and_drop_v2/utils.py," cleaner = Cleaner(tags=[], strip=True)","  cleaner = bleach.Cleaner(tags=[], strip=True)",,"=HYPERLINK(""https://github.com/openedx/xblock-drag-and-drop-v2/commit/68887d1b4a44325d2de7573d450e41129ba98b1a"",""drag_and_drop_v2/utils.py"")"
+PyVul4LLMSec_29,CVE-2022-4105,CWE-79,https://github.com/kiwitcms/kiwi,a2b169ffdef1d7c1755bade8138578423b35011b,tcms/core/history.py,," # clean stored XSS
+        if isinstance(old_value, str):
+            old_value = bleach_input(old_value)
+        if isinstance(new_value, str):
+            new_value = bleach_input(new_value)",,"=HYPERLINK(""https://github.com/kiwitcms/kiwi/commit/a2b169ffdef1d7c1755bade8138578423b35011b"",""tcms/core/history.py"")"
+PyVul4LLMSec_30,CVE-2022-41905,CWE-79,https://github.com/mar10/wsgidav,e9606ab0f42f4c1a6611bc3c52de299b0aba7726,wsgidav/dir_browser/_dir_browser.py, templateEnv = Environment(loader=templateLoader),"templateEnv = Environment(loader=templateLoader, autoescape=select_autoescape())",,"=HYPERLINK(""https://github.com/mar10/wsgidav/commit/e9606ab0f42f4c1a6611bc3c52de299b0aba7726"",""wsgidav/dir_browser/_dir_browser.py"")"
+PyVul4LLMSec_31,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f49041bb67792506d85aeda9cf6157e92f8048f4,twisted/web/vhost.py,"return self.hosts.get(host, error.NoResource())"," return self.hosts.get(host, error.NoResource(""host %s not in vhost map"" % repr(host)))",,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f49041bb67792506d85aeda9cf6157e92f8048f4"",""twisted/web/vhost.py"")"
+PyVul4LLMSec_32,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/_auth/wrapper.py," return ErrorPage(500, None, None)"," return _UnsafeErrorPage(500, ""Internal Error"", """")",,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/_auth/wrapper.py"")"
+PyVul4LLMSec_33,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/_auth/wrapper.py," return ErrorPage(500, None, None)","   return _UnsafeErrorPage(500, ""Internal Error"", """")",,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/_auth/wrapper.py"")"
+PyVul4LLMSec_34,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/distrib.py,  resource.ErrorPage(,resource._UnsafeErrorPage(,,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/distrib.py"")"
+PyVul4LLMSec_35,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/distrib.py, return resource.NoResource(),  return resource._UnsafeNoResource(),,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/distrib.py"")"
+PyVul4LLMSec_36,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/resource.py,"return NoResource(""No such child resource."")", return _UnsafeNoResource(),,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/resource.py"")"
+PyVul4LLMSec_37,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/resource.py,"  ErrorPage.__init__(self, NOT_FOUND, ""No Such Resource"", message)"," _UnsafeErrorPage.__init__(self, NOT_FOUND, ""No Such Resource"", message)",,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/resource.py"")"
+PyVul4LLMSec_38,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/script.py,"  ""resource"": resource.ErrorPage(500, ""Whoops! Internal Error"", rpyNoResource),","        ""resource"": resource._UnsafeErrorPage(
+            500, ""Whoops! Internal Error"", rpyNoResource
+        ),",,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/script.py"")"
+PyVul4LLMSec_39,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/script.py,   return resource.NoResource(),   return resource._UnsafeNoResource(),,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/script.py"")"
+PyVul4LLMSec_40,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/script.py,  return resource.NoResource().render(request), return resource._UnsafeNoResource().render(request),,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/script.py"")"
+PyVul4LLMSec_41,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/script.py,"     request.write(resource.NoResource(""File not found."").render(request))","   request.write(
+                    resource._UnsafeNoResource(""File not found."").render(request)
+                )",,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/script.py"")"
+PyVul4LLMSec_42,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/server.py," epage = resource.ErrorPage(http.NOT_ALLOWED, ""Method Not Allowed"", s)","  epage = resource._UnsafeErrorPage(
+                    http.NOT_IMPLEMENTED,
+                    ""Huh?"",
+                    ""I don't know how to treat a %s request.""",,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/server.py"")"
+PyVul4LLMSec_43,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/server.py, epage = resource.ErrorPage(, epage = resource._UnsafeErrorPage(,,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/server.py"")"
+PyVul4LLMSec_44,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/server.py,  body = resource.ErrorPage(,  body = resource._UnsafeErrorPage(,,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/server.py"")"
+PyVul4LLMSec_45,CVE-2022-39348,CWE-79,https://github.com/twisted/twisted,f2f5e81c03f14e253e85fe457e646130780db40b,src/twisted/web/distrib.py,  return resource.NoResource(), resource._UnsafeErrorPage(,,"=HYPERLINK(""https://github.com/twisted/twisted/commit/f2f5e81c03f14e253e85fe457e646130780db40b"",""src/twisted/web/distrib.py"")"
+PyVul4LLMSec_46,CVE-2022-36080,CWE-79,https://github.com/Linbreux/wikmd,259412c47d64d5b85980f95345179fbf05927798,wiki.py,,          html = clean_html(html),,"=HYPERLINK(""https://github.com/Linbreux/wikmd/commit/259412c47d64d5b85980f95345179fbf05927798"",""wiki.py"")"
+PyVul4LLMSec_47,CVE-2022-36080,CWE-79,https://github.com/Linbreux/wikmd,259412c47d64d5b85980f95345179fbf05927798,wiki.py,, html = clean_html(html),,"=HYPERLINK(""https://github.com/Linbreux/wikmd/commit/259412c47d64d5b85980f95345179fbf05927798"",""wiki.py"")"
+PyVul4LLMSec_48,CVE-2022-2514,CWE-79,https://github.com/beancount/fava,ca9e3882c7b5fbf5273ba52340b9fea6a99f3711,src/fava/application.py,"        help_html=render_template_string(
+            html,
+            beancount_version=beancount_version,
+            fava_version=fava_version,","help_html=Markup(
+            render_template_string(
+                html,
+                beancount_version=beancount_version,
+                fava_version=fava_version,
+            )",,"=HYPERLINK(""https://github.com/beancount/fava/commit/ca9e3882c7b5fbf5273ba52340b9fea6a99f3711"",""src/fava/application.py"")"
+PyVul4LLMSec_49,CVE-2022-2514,CWE-79,https://github.com/beancount/fava,ca9e3882c7b5fbf5273ba52340b9fea6a99f3711,src/fava/core/file.py,"  yield get_entry_slice(entry)[0] + ""\n""","  yield Markup(get_entry_slice(entry)[0] + ""\n"")",,"=HYPERLINK(""https://github.com/beancount/fava/commit/ca9e3882c7b5fbf5273ba52340b9fea6a99f3711"",""src/fava/core/file.py"")"
+PyVul4LLMSec_50,CVE-2022-2514,CWE-79,https://github.com/beancount/fava,ca9e3882c7b5fbf5273ba52340b9fea6a99f3711,src/fava/core/file.py,"                    yield _format_entry(
+                        entry,
+                        self.ledger.fava_options.currency_column,
+                        indent,"," yield Markup(
+                        _format_entry(
+                            entry,
+                            self.ledger.fava_options.currency_column,
+                            indent,
+                        )",,"=HYPERLINK(""https://github.com/beancount/fava/commit/ca9e3882c7b5fbf5273ba52340b9fea6a99f3711"",""src/fava/core/file.py"")"
+PyVul4LLMSec_51,CVE-2022-2514,CWE-79,https://github.com/beancount/fava,ca9e3882c7b5fbf5273ba52340b9fea6a99f3711,src/fava/core/file.py, return message,   return Markup(message),,"=HYPERLINK(""https://github.com/beancount/fava/commit/ca9e3882c7b5fbf5273ba52340b9fea6a99f3711"",""src/fava/core/file.py"")"
+PyVul4LLMSec_52,CVE-2022-2514,CWE-79,https://github.com/beancount/fava,ca9e3882c7b5fbf5273ba52340b9fea6a99f3711,src/fava/core/file.py,"    url = flask.url_for(""account"", name=account)
+    return (","   url = url_for(""account"", name=account)
+return Markup(",,"=HYPERLINK(""https://github.com/beancount/fava/commit/ca9e3882c7b5fbf5273ba52340b9fea6a99f3711"",""src/fava/core/file.py"")"
+PyVul4LLMSec_53,CVE-2022-31136,CWE-79,https://github.com/bookwyrm-social/bookwyrm,fe33fdcf564a6a5667aef75d5456bea08feab50d,bookwyrm/models/fields.py,"        sanitizer = InputHtmlParser()
+        sanitizer.feed(value)
+        return sanitizer.get_output()",  return clean(value),,"=HYPERLINK(""https://github.com/bookwyrm-social/bookwyrm/commit/fe33fdcf564a6a5667aef75d5456bea08feab50d"",""bookwyrm/models/fields.py"")"
+PyVul4LLMSec_54,CVE-2022-31136,CWE-79,https://github.com/bookwyrm-social/bookwyrm,fe33fdcf564a6a5667aef75d5456bea08feab50d,bookwyrm/status.py,"  parser = InputHtmlParser()
+    parser.feed(content)
+    content = parser.get_output()",content = sanitizer.clean(content),,"=HYPERLINK(""https://github.com/bookwyrm-social/bookwyrm/commit/fe33fdcf564a6a5667aef75d5456bea08feab50d"",""bookwyrm/status.py"")"
+PyVul4LLMSec_55,CVE-2022-31136,CWE-79,https://github.com/bookwyrm-social/bookwyrm,fe33fdcf564a6a5667aef75d5456bea08feab50d,bookwyrm/views/status.py,"    sanitizer = InputHtmlParser()
+    sanitizer.feed(content)
+    return sanitizer.get_output()",return sanitizer.clean(content),,"=HYPERLINK(""https://github.com/bookwyrm-social/bookwyrm/commit/fe33fdcf564a6a5667aef75d5456bea08feab50d"",""bookwyrm/views/status.py"")"
+PyVul4LLMSec_56,CVE-2022-1806,CWE-79,https://github.com/rtxteam/rtx,9bb109b0014f952f315c7b89e0f29a9ba84ee04c,code/autocomplete/server.py,"callback = self.get_argument(""callback"") #jsonp","    callback = sanitize_callback(self.get_argument(""callback""))",,"=HYPERLINK(""https://github.com/rtxteam/rtx/commit/9bb109b0014f952f315c7b89e0f29a9ba84ee04c"",""code/autocomplete/server.py"")"
+PyVul4LLMSec_57,CVE-2022-1430,CWE-79,https://github.com/octoprint/octoprint,8087528e4a7ddd15c7d95ff662deb5ef7de90045,src/octoprint/server/views.py,"redirect_url = request.args.get(""redirect"", request.script_root + url_for(""index""))","    default_redirect_url = request.script_root + url_for(""index"")
+    redirect_url = request.args.get(""redirect"", default_redirect_url)
+
+    parsed = urlparse(redirect_url)  # check if redirect url is valid
+    if parsed.scheme != """" or parsed.netloc != """":
+        _logger.warning(
+            f""Got an invalid redirect URL with the login attempt, misconfiguration or attack attempt: {redirect_url}""
+        )
+        redirect_url = default_redirect_url
+",,"=HYPERLINK(""https://github.com/octoprint/octoprint/commit/8087528e4a7ddd15c7d95ff662deb5ef7de90045"",""src/octoprint/server/views.py"")"
+PyVul4LLMSec_58,CVE-2022-24710,CWE-79,https://github.com/WeblateOrg/weblate,f6753a1a1c63fade6ad418fbda827c6750ab0bda,weblate/trans/forms.py,label = str(unit.translation.language),label = escape(unit.translation.language),,"=HYPERLINK(""https://github.com/WeblateOrg/weblate/commit/f6753a1a1c63fade6ad418fbda827c6750ab0bda"",""weblate/trans/forms.py"")"
+PyVul4LLMSec_59,CVE-2022-24710,CWE-79,https://github.com/WeblateOrg/weblate,22d577b1f1e88665a88b4569380148030e0f8389,weblate/trans/views/reports.py,result.append(language_format.format(name)),result.append(language_format.format(escape(name))),,"=HYPERLINK(""https://github.com/WeblateOrg/weblate/commit/22d577b1f1e88665a88b4569380148030e0f8389"",""weblate/trans/views/reports.py"")"
+PyVul4LLMSec_60,CVE-2022-24710,CWE-79,https://github.com/WeblateOrg/weblate,22d577b1f1e88665a88b4569380148030e0f8389,weblate/trans/views/reports.py," + ""\n"".join(translator_format.format(*t) for t in translators)"," ""\n"".join(
+                translator_format.format(escape(t[0]), escape(t[1]), t[2])
+                for t in translators
+            )",,"=HYPERLINK(""https://github.com/WeblateOrg/weblate/commit/22d577b1f1e88665a88b4569380148030e0f8389"",""weblate/trans/views/reports.py"")"
+PyVul4LLMSec_61,CVE-2022-24710,CWE-79,https://github.com/WeblateOrg/weblate,22d577b1f1e88665a88b4569380148030e0f8389,weblate/trans/views/reports.py,"                  cell_name.format(item[""name""] or ""Anonymous""),
+                    cell_name.format(item[""email""] or """"),","  cell_name.format(escape(item[""name""]) or ""Anonymous""),
+                    cell_name.format(escape(item[""email""]) or """"),",,"=HYPERLINK(""https://github.com/WeblateOrg/weblate/commit/22d577b1f1e88665a88b4569380148030e0f8389"",""weblate/trans/views/reports.py"")"
+PyVul4LLMSec_62,CVE-2022-23603,CWE-79,https://github.com/bildsben/iTunesRPC-Remastered,54b02d9f3a94de94e4fb471908b8cf798e62e411,module/connect_to_server.py,  status = eval(str(status)), status = ast.literal_eval(str(status)),,"=HYPERLINK(""https://github.com/bildsben/iTunesRPC-Remastered/commit/54b02d9f3a94de94e4fb471908b8cf798e62e411"",""module/connect_to_server.py"")"
+PyVul4LLMSec_63,CVE-2022-23603,CWE-79,https://github.com/bildsben/iTunesRPC-Remastered,24f43aac0f4116b3d89fdbe973ba92c6cfb0d998,upload/server.py,"   return {""entry"": file_db_entry}","  return escape({""entry"": file_db_entry})",,"=HYPERLINK(""https://github.com/bildsben/iTunesRPC-Remastered/commit/24f43aac0f4116b3d89fdbe973ba92c6cfb0d998"",""upload/server.py"")"
+PyVul4LLMSec_64,CVE-2022-23609,CWE-22,https://github.com/bildsben/iTunesRPC-Remastered,1eb1e5428f0926b2829a0bbbb65b0d946e608593,upload/server.py, remove(filename), remove(werkzeug.utils.secure_filename(filename)),,"=HYPERLINK(""https://github.com/bildsben/iTunesRPC-Remastered/commit/1eb1e5428f0926b2829a0bbbb65b0d946e608593"",""upload/server.py"")"
+PyVul4LLMSec_65,CVE-2022-24900,CWE-22,https://github.com/onlaj/Piano-LED-Visualizer,3f10602323cd8184e1c69a76b815655597bf0ee5,webinterface/views_api.py,"   return send_file(""../Songs/"" + value, mimetype='application/x-csv', attachment_filename=value,","  return send_file(safe_join(""../Songs/"" + value), mimetype='application/x-csv', attachment_filename=value,
+                             as_attachment=True)",,"=HYPERLINK(""https://github.com/onlaj/Piano-LED-Visualizer/commit/3f10602323cd8184e1c69a76b815655597bf0ee5"",""webinterface/views_api.py"")"
+PyVul4LLMSec_66,CVE-2022-24900,CWE-22,https://github.com/onlaj/Piano-LED-Visualizer,3f10602323cd8184e1c69a76b815655597bf0ee5,webinterface/views_api.py,"         return send_file(""../Songs/"" + value.replace("".mid"", "".abc""), mimetype='application/x-csv',"," return send_file(safe_join(""../Songs/"", value.replace("".mid"", "".abc"")), mimetype='application/x-csv',
+                             attachment_filename=value.replace("".mid"", "".abc""), as_attachment=True)",,"=HYPERLINK(""https://github.com/onlaj/Piano-LED-Visualizer/commit/3f10602323cd8184e1c69a76b815655597bf0ee5"",""webinterface/views_api.py"")"
+PyVul4LLMSec_67,CVE-2022-24840,CWE-22,https://github.com/codingjoe/django-s3file,68ccd2c621a40eb66fdd6af2be9d5fcc9c373318,s3file/forms.py,"  upload_path = str(
+        getattr(settings, ""S3FILE_UPLOAD_PATH"", pathlib.PurePosixPath(""tmp"", ""s3file""))","    upload_path = safe_join(
+        str(storage.aws_location),
+        str(
+            getattr(
+                settings, ""S3FILE_UPLOAD_PATH"", pathlib.PurePosixPath(""tmp"", ""s3file"")
+            )
+        ),",,"=HYPERLINK(""https://github.com/codingjoe/django-s3file/commit/68ccd2c621a40eb66fdd6af2be9d5fcc9c373318"",""s3file/forms.py"")"
+PyVul4LLMSec_68,CVE-2022-31501,CWE-22,https://github.com/ChaoticOnyx/OnyxForum,f25543dfc62a9694d7e4f67eebfa45e3de916053,modules/hub/hub/views.py,"file_path = os.path.join(server.logs_path, path)"," file_path = safe_join(server.logs_path, path)",,"=HYPERLINK(""https://github.com/ChaoticOnyx/OnyxForum/commit/f25543dfc62a9694d7e4f67eebfa45e3de916053"",""modules/hub/hub/views.py"")"
+PyVul4LLMSec_69,CVE-2022-31502,CWE-22,https://github.com/operatorequals/wormnest,2dfe96fc2570586ac487b399ac20d41b3c114861,app.py," abs_path = os.path.join(CONFIG['SRV_DIR'], req_path)"," abs_path = safe_join(CONFIG['SRV_DIR'], req_path)",,"=HYPERLINK(""https://github.com/operatorequals/wormnest/commit/2dfe96fc2570586ac487b399ac20d41b3c114861"",""app.py"")"
+PyVul4LLMSec_70,CVE-2022-31506,CWE-22,https://github.com/cmusatyalab/opendiamond,398049c187ee644beabab44d6fece82251c1ea56,opendiamond/dataretriever/diamond_store.py," return os.path.join(DATAROOT, obj_path)"," return safe_join(DATAROOT, obj_path)",,"=HYPERLINK(""https://github.com/cmusatyalab/opendiamond/commit/398049c187ee644beabab44d6fece82251c1ea56"",""opendiamond/dataretriever/diamond_store.py"")"
+PyVul4LLMSec_71,CVE-2022-31506,CWE-22,https://github.com/cmusatyalab/opendiamond,398049c187ee644beabab44d6fece82251c1ea56,opendiamond/dataretriever/diamond_store.py," return os.path.join(INDEXDIR, index)","    return safe_join(INDEXDIR, index)
+",,"=HYPERLINK(""https://github.com/cmusatyalab/opendiamond/commit/398049c187ee644beabab44d6fece82251c1ea56"",""opendiamond/dataretriever/diamond_store.py"")"
+PyVul4LLMSec_72,CVE-2022-31506,CWE-22,https://github.com/cmusatyalab/opendiamond,398049c187ee644beabab44d6fece82251c1ea56,opendiamond/dataretriever/mixer_store.py," return os.path.join(DATAROOT, obj_path)"," return safe_join(DATAROOT, obj_path)
+",,"=HYPERLINK(""https://github.com/cmusatyalab/opendiamond/commit/398049c187ee644beabab44d6fece82251c1ea56"",""opendiamond/dataretriever/mixer_store.py"")"
+PyVul4LLMSec_73,CVE-2022-31506,CWE-22,https://github.com/cmusatyalab/opendiamond,398049c187ee644beabab44d6fece82251c1ea56,opendiamond/dataretriever/mixer_store.py,"  return os.path.join(INDEXDIR, index)","  return safe_join(INDEXDIR, index)",,"=HYPERLINK(""https://github.com/cmusatyalab/opendiamond/commit/398049c187ee644beabab44d6fece82251c1ea56"",""opendiamond/dataretriever/mixer_store.py"")"
+PyVul4LLMSec_74,CVE-2022-31506,CWE-22,https://github.com/cmusatyalab/opendiamond,398049c187ee644beabab44d6fece82251c1ea56,opendiamond/dataretriever/video_store.py,"return os.path.join(DATAROOT, obj_path)","    return safe_join(DATAROOT, obj_path)",,"=HYPERLINK(""https://github.com/cmusatyalab/opendiamond/commit/398049c187ee644beabab44d6fece82251c1ea56"",""opendiamond/dataretriever/video_store.py"")"
+PyVul4LLMSec_75,CVE-2022-31506,CWE-22,https://github.com/cmusatyalab/opendiamond,398049c187ee644beabab44d6fece82251c1ea56,opendiamond/dataretriever/video_store.py," return os.path.join(INDEXDIR, index)","return safe_join(INDEXDIR, index)",,"=HYPERLINK(""https://github.com/cmusatyalab/opendiamond/commit/398049c187ee644beabab44d6fece82251c1ea56"",""opendiamond/dataretriever/video_store.py"")"
+PyVul4LLMSec_76,CVE-2022-31507,CWE-22,https://github.com/ganga-devs/ganga,730e7aba192407d35eb37dd7938d49071124be8c,ganga/GangaGUI/gui/routes.py,"abs_path = os.path.join(job_base_dir, path)"," abs_path = safe_join(job_base_dir, path)",,"=HYPERLINK(""https://github.com/ganga-devs/ganga/commit/730e7aba192407d35eb37dd7938d49071124be8c"",""ganga/GangaGUI/gui/routes.py"")"
+PyVul4LLMSec_77,CVE-2022-31508,CWE-22,https://github.com/idayrus/evoting,241d92a4d68f524365a6322b5bbcfaa7d9abc8a3,app/helper/middleware.py,"filepath = path.join(app.config.get(""PRIVATE_DIR""), filename)","  filepath = safe_join(app.config.get(""PRIVATE_DIR""), filename)",,"=HYPERLINK(""https://github.com/idayrus/evoting/commit/241d92a4d68f524365a6322b5bbcfaa7d9abc8a3"",""app/helper/middleware.py"")"
+PyVul4LLMSec_78,CVE-2022-31549,CWE-22,https://github.com/olmax99/helm-flask-celery,28c985d712d7ac26893433e8035e2e3678fcae9f,webapiservice/flaskapi/core/app_setup.py," file_path = os.path.join(current_app.template_folder, path)","file_path = safe_join(current_app.template_folder, path)",,"=HYPERLINK(""https://github.com/olmax99/helm-flask-celery/commit/28c985d712d7ac26893433e8035e2e3678fcae9f"",""webapiservice/flaskapi/core/app_setup.py"")"
+PyVul4LLMSec_79,CVE-2022-31564,CWE-22,https://github.com/woduq1414/munhak-moa,e8f800373b20cb22de70c7a994325b8903877da0,app.py,"  abs_file_path = os.path.join(script_dir, rel_path)"," abs_file_path = safe_join(script_dir, rel_path)",,"=HYPERLINK(""https://github.com/woduq1414/munhak-moa/commit/e8f800373b20cb22de70c7a994325b8903877da0"",""app.py"")"
+PyVul4LLMSec_80,CVE-2022-35918,CWE-22,https://github.com/streamlit/streamlit,80d9979d5f4a00217743d607078a1d867fad8acf,lib/streamlit/components/v1/components.py," abspath = os.path.join(component_root, filename)","        abspath = os.path.realpath(os.path.join(component_root, filename))
+
+        # Do NOT expose anything outside of the component root.
+        if os.path.commonprefix([component_root, abspath]) != component_root:
+            self.write(""""forbidden"""")
+            self.set_status(403)
+            return",,"=HYPERLINK(""https://github.com/streamlit/streamlit/commit/80d9979d5f4a00217743d607078a1d867fad8acf"",""lib/streamlit/components/v1/components.py"")"
+PyVul4LLMSec_81,CVE-2022-36081,CWE-22,https://github.com/Linbreux/wikmd,8d1f94ec86b5b6c3df8ef10051facfb511a78450,wiki.py,"for root, subfolder, files in os.walk(os.path.join(cfg.wiki_directory, folderpath)):","  safe_folder = cfg.wiki_directory
+    requested_path = os.path.join(cfg.wiki_directory,folderpath) 
+    print(requested_path)
+    if os.path.commonprefix((os.path.realpath(requested_path),os.path.realpath(safe_folder))) != os.path.realpath(safe_folder): 
+        return index()
+    for root, subfolder, files in os.walk(requested_path):",,"=HYPERLINK(""https://github.com/Linbreux/wikmd/commit/8d1f94ec86b5b6c3df8ef10051facfb511a78450"",""wiki.py"")"
+PyVul4LLMSec_82,CVE-2022-3389,CWE-22,https://github.com/ikus060/rdiffweb,323383d1db656f1b1291be529947bd943a6b0e99,rdiffweb/rdw_app.py,self.static = static(static_dir),   self.static = staticdir(static_dir),,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/323383d1db656f1b1291be529947bd943a6b0e99"",""rdiffweb/rdw_app.py"")"
+PyVul4LLMSec_83,CVE-2022-3389,CWE-22,https://github.com/ikus060/rdiffweb,323383d1db656f1b1291be529947bd943a6b0e99,rdiffweb/rdw_app.py,  self.robots_txt = static(robots_txt),"self.robots_txt = staticfile(robots_txt)
+",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/323383d1db656f1b1291be529947bd943a6b0e99"",""rdiffweb/rdw_app.py"")"
+PyVul4LLMSec_84,CVE-2022-3389,CWE-22,https://github.com/ikus060/rdiffweb,323383d1db656f1b1291be529947bd943a6b0e99,rdiffweb/rdw_app.py,     self.root.favicon_ico = static(self._favicon),self.root.favicon_ico = staticfile(self._favicon),,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/323383d1db656f1b1291be529947bd943a6b0e99"",""rdiffweb/rdw_app.py"")"
+PyVul4LLMSec_85,CVE-2022-3389,CWE-22,https://github.com/ikus060/rdiffweb,323383d1db656f1b1291be529947bd943a6b0e99,rdiffweb/rdw_app.py,       self.root.header_logo = static(self._header_logo), self.root.header_logo = staticfile(self._header_logo),,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/323383d1db656f1b1291be529947bd943a6b0e99"",""rdiffweb/rdw_app.py"")"
+PyVul4LLMSec_86,CVE-2022-23470,CWE-22,https://github.com/galaxyproject/galaxy,e5e6bda4f014f807ca77ee0cf6af777a55918346,lib/galaxy/web/framework/middleware/static.py," full = os.path.join(directory, filename)","full = self.normpath(os.path.join(directory, filename))
+        if not full.startswith(directory):
+            # Out of bounds
+            return self.not_found(environ, start_response)",,"=HYPERLINK(""https://github.com/galaxyproject/galaxy/commit/e5e6bda4f014f807ca77ee0cf6af777a55918346"",""lib/galaxy/web/framework/middleware/static.py"")"
+PyVul4LLMSec_87,CVE-2022-44900,CWE-22,https://github.com/miurahr/py7zr,1bb43f17515c7f69673a1c88ab9cc72a7bbef406,py7zr/py7zr.py,"            # check f.filename has invalid directory traversals
+            if path is None:
+                # do following but is_relative_to introduced in py 3.9
+                # so I replaced it with relative_to. when condition is not satisfied, raise ValueError
+                # if not pathlib.Path(...).joinpath(remove_relative_path_marker(outname)).is_relative_to(...):
+                #    raise Bad7zFile
+                try:
+                    pathlib.Path(os.getcwd()).joinpath(remove_relative_path_marker(outname)).relative_to(os.getcwd())
+                except ValueError:
+                    raise Bad7zFile
+                outfilename = pathlib.Path(remove_relative_path_marker(outname))","            if path is None or path.is_absolute():
+                outfilename = get_sanitized_output_path(outname, path)",,"=HYPERLINK(""https://github.com/miurahr/py7zr/commit/1bb43f17515c7f69673a1c88ab9cc72a7bbef406"",""py7zr/py7zr.py"")"
+PyVul4LLMSec_88,CVE-2022-44900,CWE-22,https://github.com/miurahr/py7zr,1bb43f17515c7f69673a1c88ab9cc72a7bbef406,py7zr/py7zr.py,"outfilename = path.joinpath(remove_relative_path_marker(outname))
+                try:
+                    outfilename.relative_to(path)
+                except ValueError:
+                    raise Bad7zFile
+            # When python on Windows and not python on Cygwin,
+            # Add win32 file namespace to exceed microsoft windows
+            # path length limitation to 260 bytes
+            # ref.
+            # https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
+            # In editions of Windows before Windows 10 version 1607,
+            # the maximum length for a path is MAX_PATH, which is defined as
+            # 260 characters. In later versions of Windows, changing a registry key
+            # or select option when python installation is required to remove the limit.
+            if is_windows_native_python() and outfilename.is_absolute() and not is_windows_unc_path(outfilename):
+                outfilename = pathlib.WindowsPath(""\\\\?\\"" + str(outfilename))","outfilename = get_sanitized_output_path(outname, pathlib.Path(os.getcwd()).joinpath(path))",,"=HYPERLINK(""https://github.com/miurahr/py7zr/commit/1bb43f17515c7f69673a1c88ab9cc72a7bbef406"",""py7zr/py7zr.py"")"
+PyVul4LLMSec_89,CVE-2022-23530,CWE-22,https://github.com/DataDog/guarddog,37c7d0767ba28f4df46117d478f97652594c491c,guarddog/scanners/package_scanner.py,"  shutil.unpack_archive(zippath, unzippedpath)
+        os.remove(zippath)","       if zippath.endswith('.tar.gz'):
+            tarsafe.open(zippath).extractall(unzippedpath)
+            os.remove(zippath)
+        else:
+            raise ValueError(""unsupported archive extension: "" + zippath)",,"=HYPERLINK(""https://github.com/DataDog/guarddog/commit/37c7d0767ba28f4df46117d478f97652594c491c"",""guarddog/scanners/package_scanner.py"")"
+PyVul4LLMSec_90,CVE-2022-4572,CWE-22,https://github.com/jrspruitt/ubi_reader,d5d68e6b1b9f7070c29df5f67fc060f579ae9139,ubireader/ubifs/output.py,"  dent_path = os.path.join(path, dent_node.name)","    if not is_safe_path(path, dent_node.name):
+        error(extract_dents, 'Warning', 'Path traversal attempt: %s, discarding' % (dent_node.name))
+        return
+    dent_path = os.path.realpath(os.path.join(path, dent_node.name))
+",,"=HYPERLINK(""https://github.com/jrspruitt/ubi_reader/commit/d5d68e6b1b9f7070c29df5f67fc060f579ae9139"",""ubireader/ubifs/output.py"")"
+PyVul4LLMSec_91,CVE-2023-25802,CWE-22,https://github.com/hap-wi/roxy-wi,0054f25da7cf8c7480452f48e39308b5e392dc67,app/modules/roxywi/logs.py,,if '..' in log_file: return 'error: nice try',,"=HYPERLINK(""https://github.com/hap-wi/roxy-wi/commit/0054f25da7cf8c7480452f48e39308b5e392dc67"",""app/modules/roxywi/logs.py"")"
+PyVul4LLMSec_92,CVE-2023-28458,CWE-22,https://github.com/pretalx/pretalx,60722c43cf975f319e94102e6bff320723776890,src/pretalx/agenda/management/commands/export_schedule_html.py,"
+    path = Path(destination) / path.lstrip(""/"")","   path = (Path(destination) / path.lstrip(""/"")).resolve()
+    if not Path(destination) in path.parents:
+        raise CommandError(""Path traversal detected, aborting."")",,"=HYPERLINK(""https://github.com/pretalx/pretalx/commit/60722c43cf975f319e94102e6bff320723776890"",""src/pretalx/agenda/management/commands/export_schedule_html.py"")"
+PyVul4LLMSec_93,CVE-2023-28459,CWE-22,https://github.com/pretalx/pretalx,60722c43cf975f319e94102e6bff320723776890,src/pretalx/agenda/management/commands/export_schedule_html.py,,"   # Prevent directory traversal, make sure the path is inside the media or static root
+    local_path = local_path.resolve(strict=True)
+    if not any(
+        path in local_path.parents
+        for path in (settings.MEDIA_ROOT, settings.STATIC_ROOT)
+    ):
+        raise FileNotFoundError()",,"=HYPERLINK(""https://github.com/pretalx/pretalx/commit/60722c43cf975f319e94102e6bff320723776890"",""src/pretalx/agenda/management/commands/export_schedule_html.py"")"
+PyVul4LLMSec_94,CVE-2023-30620,CWE-22,https://github.com/mindsdb/mindsdb,4419b0f0019c000db390b54d8b9d06e1d3670039,mindsdb/api/http/namespaces/file.py,f.extractall(temp_dir_path),"safe_extract(f, temp_dir_path)",,"=HYPERLINK(""https://github.com/mindsdb/mindsdb/commit/4419b0f0019c000db390b54d8b9d06e1d3670039"",""mindsdb/api/http/namespaces/file.py"")"
+PyVul4LLMSec_95,CVE-2022-31506,CWE-22,https://github.com/cmusatyalab/opendiamond,398049c187ee644beabab44d6fece82251c1ea56,opendiamond/dataretriever/video_store.py,"src_uri = 'file://' + os.path.join(DATAROOT, dataset, rel_path)","        src_uri = 'file://' + _get_obj_absolute_path(dataset, rel_path)",,"=HYPERLINK(""https://github.com/cmusatyalab/opendiamond/commit/398049c187ee644beabab44d6fece82251c1ea56"",""opendiamond/dataretriever/video_store.py"")"
+PyVul4LLMSec_96,CVE-2022-1053,CWE-20,https://github.com/keylime/keylime,bd5de712acdd77860e7dc58969181e16c7a8dc5d,keylime/cloud_verifier_tornado.py,"if agent_data['mtls_cert'] is None and agent_data['supported_version'] != ""1.0"":
+mtls_cert = agent_data['mtls_cert']","if agent_data['mtls_cert'] is None and agent_data['supported_version'] != ""1.0"":",,"=HYPERLINK(""https://github.com/keylime/keylime/commit/bd5de712acdd77860e7dc58969181e16c7a8dc5d"",""keylime/cloud_verifier_tornado.py"")"
+PyVul4LLMSec_97,CVE-2022-1053,CWE-20,https://github.com/keylime/keylime,bd5de712acdd77860e7dc58969181e16c7a8dc5d,keylime/cloud_verifier_tornado.py,"   mtls_cert = registrar_data.get('mtls_cert', None)",mtls_cert = agent_data['mtls_cert'],,"=HYPERLINK(""https://github.com/keylime/keylime/commit/bd5de712acdd77860e7dc58969181e16c7a8dc5d"",""keylime/cloud_verifier_tornado.py"")"
+PyVul4LLMSec_98,CVE-2022-29202,CWE-20,https://github.com/tensorflow/tensorflow,bd4d5583ff9c8df26d47a23e508208844297310e,tensorflow/python/ops/ragged/ragged_factory_ops.py,," if ragged_rank is not None and max_depth < ragged_rank:
+      raise ValueError(f""Invalid pylist={pylist}, max depth smaller than ""
+                       f""ragged_rank={ragged_rank}"")",,"=HYPERLINK(""https://github.com/tensorflow/tensorflow/commit/bd4d5583ff9c8df26d47a23e508208844297310e"",""tensorflow/python/ops/ragged/ragged_factory_ops.py"")"
+PyVul4LLMSec_99,CVE-2022-31041,CWE-20,https://github.com/open-formulieren/open-forms,0978a29e821a7228c5d46c0527c3e925eb91b071,src/openforms/submissions/models/submission_files.py,"  return (
+                self.create("," with upload.content.open(""rb"") as content:
+                instance = self.create(",,"=HYPERLINK(""https://github.com/open-formulieren/open-forms/commit/0978a29e821a7228c5d46c0527c3e925eb91b071"",""src/openforms/submissions/models/submission_files.py"")"
+PyVul4LLMSec_100,CVE-2022-31020,CWE-20,https://github.com/hyperledger/indy-node,fe507474f77084faef4539101e2bbb4d508a97f5,indy_common/util.py,,"  cmd = re.split("";|&&"", cmd.splitlines()[0], 1)[0].rstrip()",,"=HYPERLINK(""https://github.com/hyperledger/indy-node/commit/fe507474f77084faef4539101e2bbb4d508a97f5"",""indy_common/util.py"")"
+PyVul4LLMSec_101,CVE-2022-36082,CWE-20,https://github.com/mansuf/mangadex-downloader,439cc2825198ebc12b3310c95c39a8c7710c9b42,mangadex_downloader/cli/validator.py,file_path = urls,"file_content = _try_read(urls)
+            file_path = file_content if file_content is not None else urls",,"=HYPERLINK(""https://github.com/mansuf/mangadex-downloader/commit/439cc2825198ebc12b3310c95c39a8c7710c9b42"",""mangadex_downloader/cli/validator.py"")"
+PyVul4LLMSec_102,CVE-2022-39275,CWE-20,https://github.com/saleor/saleor,96e04c092ddcac17b14f2e31554aa02d9006d0ce,saleor/graphql/account/mutations/account.py," address = cls.get_node_or_error(info, data.get(""id""), Address)","address = cls.get_node_or_error(info, data.get(""id""), only_type=Address)",,"=HYPERLINK(""https://github.com/saleor/saleor/commit/96e04c092ddcac17b14f2e31554aa02d9006d0ce"",""saleor/graphql/account/mutations/account.py"")"
+PyVul4LLMSec_103,CVE-2022-39275,CWE-20,https://github.com/saleor/saleor,96e04c092ddcac17b14f2e31554aa02d9006d0ce,saleor/graphql/account/mutations/base.py,"  instance = cls.get_node_or_error(info, node_id, Address)"," instance = cls.get_node_or_error(info, node_id, only_type=Address)",,"=HYPERLINK(""https://github.com/saleor/saleor/commit/96e04c092ddcac17b14f2e31554aa02d9006d0ce"",""saleor/graphql/account/mutations/base.py"")"
+PyVul4LLMSec_104,CVE-2022-39275,CWE-20,https://github.com/saleor/saleor,96e04c092ddcac17b14f2e31554aa02d9006d0ce,saleor/graphql/menu/mutations.py,"  menu = cls.get_node_or_error(info, menu, field=""menu"")"," menu = cls.get_node_or_error(info, menu, field=""menu"", only_type=Menu)
+",,"=HYPERLINK(""https://github.com/saleor/saleor/commit/96e04c092ddcac17b14f2e31554aa02d9006d0ce"",""saleor/graphql/menu/mutations.py"")"
+PyVul4LLMSec_105,CVE-2022-39275,CWE-20,https://github.com/saleor/saleor,96e04c092ddcac17b14f2e31554aa02d9006d0ce,saleor/graphql/product/bulk_mutations/products.py,"        product = cls.get_node_or_error(info, data[""product_id""], models.Product)"," product = cls.get_node_or_error(info, data[""product_id""], only_type=""Product"")",,"=HYPERLINK(""https://github.com/saleor/saleor/commit/96e04c092ddcac17b14f2e31554aa02d9006d0ce"",""saleor/graphql/product/bulk_mutations/products.py"")"
+PyVul4LLMSec_106,CVE-2023-22452,CWE-20,https://github.com/Kenny2github/kenny2automate,a947d7ce408687b587c7e6dfd6026f7c4ee31ac2,kenny2automate/server/__init__.py,,"if set(param['channel_id'] for param in params) \
+                - set(channel.id for channel in guild.channels): # is not empty
+            raise web.HTTPBadRequest",,"=HYPERLINK(""https://github.com/Kenny2github/kenny2automate/commit/a947d7ce408687b587c7e6dfd6026f7c4ee31ac2"",""kenny2automate/server/__init__.py"")"
+PyVul4LLMSec_107,CVE-2023-22898,CWE-20,https://github.com/pandora-analysis/pandora,1dc06327fdc07c56eae653e497dd137ec70d8265,pandora/workers/extractor.py,"        # wait for all the tasks to finish
+        while not all(t.workers_done for t in tasks):
+            time.sleep(1)
+
+        if tasks:
+            report.status = max(t.status for t in tasks)
+            if report.status > Status.CLEAN:
+                report.add_details('Warning', 'There are suspicious files in this archive, click on the ""Extracted"" tab for more.')
+        elif not report.status == Status.NOTAPPLICABLE:",   if not tasks and not report.status == Status.NOTAPPLICABLE:,,"=HYPERLINK(""https://github.com/pandora-analysis/pandora/commit/1dc06327fdc07c56eae653e497dd137ec70d8265"",""pandora/workers/extractor.py"")"
+PyVul4LLMSec_108,CVE-2023-22898,CWE-20,https://github.com/pandora-analysis/pandora,1dc06327fdc07c56eae653e497dd137ec70d8265,pandora/workers/extractor.py,,"        elif report.status not in [Status.ERROR, Status.WARN, Status.ALERT, Status.OVERWRITE]:
+            # wait for all the workers to finish, or have one of them raising an ALERT
+            while not all(t.workers_done for t in tasks):
+                for t in tasks:
+                    # If any of the task is marked as ALERT or OVERWRITE, we can quit.
+                    if t.workers_done and t.status >= Status.ALERT:
+                        report.add_details('Warning', 'There are suspicious files in this archive, click on the ""Extracted"" tab for more.')
+                        break
+                time.sleep(1)
+            report.status = max(t.status for t in tasks if t.workers_done)",,"=HYPERLINK(""https://github.com/pandora-analysis/pandora/commit/1dc06327fdc07c56eae653e497dd137ec70d8265"",""pandora/workers/extractor.py"")"
+PyVul4LLMSec_109,CVE-2023-0434,CWE-20,https://github.com/pyload/pyload,a2b1eb1028f45ac58dea5f58593c1d3db2b4a104,src/pyload/core/config/parser.py,"         value = ""0:00""
+            if "":"" not in value:","                value = default_value
+            elif "":"" not in value:",,"=HYPERLINK(""https://github.com/pyload/pyload/commit/a2b1eb1028f45ac58dea5f58593c1d3db2b4a104"",""src/pyload/core/config/parser.py"")"
+PyVul4LLMSec_110,CVE-2023-0434,CWE-20,https://github.com/pyload/pyload,a2b1eb1028f45ac58dea5f58593c1d3db2b4a104,src/pyload/core/config/parser.py,,"            hours, seconds = value.split("":"", 1)
+            if (
+                hours.isnumeric()
+                and seconds.isnumeric()
+                and 0 <= int(hours) <= 23
+                and 0 <= int(seconds) <= 59
+            ):
+                pass
+            else:
+                value = default_value",,"=HYPERLINK(""https://github.com/pyload/pyload/commit/a2b1eb1028f45ac58dea5f58593c1d3db2b4a104"",""src/pyload/core/config/parser.py"")"
+PyVul4LLMSec_111,CVE-2023-0434,CWE-20,https://github.com/pyload/pyload,a2b1eb1028f45ac58dea5f58593c1d3db2b4a104,src/pyload/core/config/parser.py," return """" if value in (None, """") else os.path.realpath(os.path.expanduser(os.fsdecode(value)))"," return (
+                """"
+                if value in (None, """")
+                else os.path.realpath(os.path.expanduser(os.fsdecode(value)))
+            )",,"=HYPERLINK(""https://github.com/pyload/pyload/commit/a2b1eb1028f45ac58dea5f58593c1d3db2b4a104"",""src/pyload/core/config/parser.py"")"
+PyVul4LLMSec_112,CVE-2023-23934,CWE-20,https://github.com/pallets/werkzeug,cf275f42acad1b5950c50ffe8ef58fe62cdce028,src/werkzeug/_internal.py,  (?P<key>[^=;]+),(?P<key>[^=;]*),,"=HYPERLINK(""https://github.com/pallets/werkzeug/commit/cf275f42acad1b5950c50ffe8ef58fe62cdce028"",""src/werkzeug/_internal.py"")"
+PyVul4LLMSec_113,CVE-2023-27586,CWE-20,https://github.com/Kozea/CairoSVG,12d31c653c0254fa9d9853f66b04ea46e7397255,cairosvg/parser.py,,"# Don’t allow fetching external files unless explicitly asked for
+        if 'url_fetcher' not in kwargs and not unsafe:
+            self.url_fetcher = (
+                lambda *args, **kwargs: b'<svg width=""1"" height=""1""></svg>')",,"=HYPERLINK(""https://github.com/Kozea/CairoSVG/commit/12d31c653c0254fa9d9853f66b04ea46e7397255"",""cairosvg/parser.py"")"
+PyVul4LLMSec_114,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/admin/views.py,"   return redirect(request.GET.get(""next"", request.get_full_path()))","return safe_redirect(request, ""next"", request.get_full_path())",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/admin/views.py"")"
+PyVul4LLMSec_115,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/comment/flag/views.py,"    return redirect(request.POST.get('next', comment.get_absolute_url()))","return safe_redirect(request, 'next', comment.get_absolute_url(), method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/comment/flag/views.py"")"
+PyVul4LLMSec_116,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/comment/like/views.py,"return redirect(request.POST.get('next', comment.get_absolute_url()))","return safe_redirect(request, 'next', comment.get_absolute_url(), method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/comment/like/views.py"")"
+PyVul4LLMSec_117,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/comment/like/views.py,"     return redirect(request.POST.get('next', like.comment.get_absolute_url()))"," return safe_redirect(
+            request, 'next', like.comment.get_absolute_url(), method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/comment/like/views.py"")"
+PyVul4LLMSec_118,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/comment/poll/views.py," return redirect(request.GET.get('next', poll.get_absolute_url()))","   return safe_redirect(request, 'next', poll.get_absolute_url())",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/comment/poll/views.py"")"
+PyVul4LLMSec_119,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/comment/poll/views.py,"  return redirect(request.POST.get('next', poll.get_absolute_url()))","  return safe_redirect(request, 'next', poll.get_absolute_url(), method='POST')
+",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/comment/poll/views.py"")"
+PyVul4LLMSec_120,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/comment/poll/views.py," return redirect(request.POST.get('next', poll.get_absolute_url()))","return safe_redirect(request, 'next', poll.get_absolute_url(), method='POST')
+",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/comment/poll/views.py"")"
+PyVul4LLMSec_121,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/comment/views.py,"       return redirect(
+                request.POST.get('next', None) or
+                Comment","   return safe_redirect(request, 'next', default_url, method='POST')
+",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/comment/views.py"")"
+PyVul4LLMSec_122,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/comment/views.py,"     return redirect(request.POST.get('next', comment.get_absolute_url()))","        return safe_redirect(request, 'next', comment.get_absolute_url(), method='POST')
+",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/comment/views.py"")"
+PyVul4LLMSec_123,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/comment/views.py," return redirect(request.POST.get('next', comment.get_absolute_url()))"," return safe_redirect(request, 'next', comment.get_absolute_url(), method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/comment/views.py"")"
+PyVul4LLMSec_124,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/comment/views.py,"   return redirect(request.GET.get('next', comment.get_absolute_url()))"," return safe_redirect(request, 'next', comment.get_absolute_url())",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/comment/views.py"")"
+PyVul4LLMSec_125,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/comment/views.py," return redirect(request.POST.get('next', topic.get_absolute_url()))"," return safe_redirect(request, 'next', topic.get_absolute_url(), method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/comment/views.py"")"
+PyVul4LLMSec_126,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/core/utils/decorators.py," return redirect(request.GET.get('next', request.user.st.get_absolute_url()))","return safe_redirect(request, 'next', request.user.st.get_absolute_url())",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/core/utils/decorators.py"")"
+PyVul4LLMSec_127,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/topic/favorite/views.py," return redirect(request.POST.get('next', topic.get_absolute_url()))","    return safe_redirect(request, 'next', topic.get_absolute_url(), method='POST')
+",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/topic/favorite/views.py"")"
+PyVul4LLMSec_128,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/topic/favorite/views.py,"return redirect(request.POST.get('next', favorite.topic.get_absolute_url()))","return safe_redirect(request, 'next', favorite.topic.get_absolute_url(), method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/topic/favorite/views.py"")"
+PyVul4LLMSec_129,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/topic/moderate/views.py,"   return redirect(request.POST.get(
+            'next', topic.get_absolute_url()))","   return safe_redirect(request, 'next', topic.get_absolute_url(), method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/topic/moderate/views.py"")"
+PyVul4LLMSec_130,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/topic/notification/views.py,"  return redirect(request.POST.get('next', topic.get_absolute_url()))"," return safe_redirect(request, 'next', topic.get_absolute_url(), method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/topic/notification/views.py"")"
+PyVul4LLMSec_131,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/topic/notification/views.py,"    return redirect(request.POST.get(
+        'next', notification.topic.get_absolute_url()))","  return safe_redirect(
+        request, 'next', notification.topic.get_absolute_url(), method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/topic/notification/views.py"")"
+PyVul4LLMSec_132,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/topic/notification/views.py,"   return redirect(request.POST.get(
+        'next', reverse('spirit:topic:notification:index')))","return safe_redirect(
+        request, 'next', reverse('spirit:topic:notification:index'), method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/topic/notification/views.py"")"
+PyVul4LLMSec_133,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/topic/private/views.py,"       return redirect(
+                request.POST.get('next', None) or
+                tform.category.get_absolute_url())","return safe_redirect(
+                request, 'next', lambda: tform.category.get_absolute_url(), method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/topic/private/views.py"")"
+PyVul4LLMSec_134,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/topic/private/views.py,"  return redirect(request.POST.get('next', topic_private.get_absolute_url()))","    return safe_redirect(
+        request, 'next', topic_private.get_absolute_url(), method='POST')
+
+",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/topic/private/views.py"")"
+PyVul4LLMSec_135,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/topic/private/views.py,"       return redirect(request.POST.get('next', topic_private.get_absolute_url()))"," return safe_redirect(
+            request, 'next', topic_private.get_absolute_url(), method='POST')
+",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/topic/private/views.py"")"
+PyVul4LLMSec_136,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/topic/private/views.py,"   return redirect(request.POST.get('next', topic.get_absolute_url()))","        return safe_redirect(
+            request, 'next', topic.get_absolute_url(), method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/topic/private/views.py"")"
+PyVul4LLMSec_137,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/topic/views.py,"     return redirect(
+                request.POST.get('next', None) or
+                form.get_category().get_absolute_url())"," return safe_redirect(
+                request, 'next', default_url, method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/topic/views.py"")"
+PyVul4LLMSec_138,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/topic/views.py," return redirect(request.POST.get('next', topic.get_absolute_url()))"," return safe_redirect(request,'next', topic.get_absolute_url(), method='POST')",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/topic/views.py"")"
+PyVul4LLMSec_139,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/user/admin/views.py,"   return redirect(request.GET.get(""next"", request.get_full_path()))","return safe_redirect(request, ""next"", request.get_full_path())",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/user/admin/views.py"")"
+PyVul4LLMSec_140,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/user/auth/views.py," return redirect(request.GET.get('next', request.user.st.get_absolute_url()))","return safe_redirect(
+            request, 'next', request.user.st.get_absolute_url())
+",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/user/auth/views.py"")"
+PyVul4LLMSec_141,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/user/auth/views.py," return redirect(request.GET.get('next', reverse(settings.LOGIN_URL)))"," return safe_redirect(request, 'next', reverse(settings.LOGIN_URL))",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/user/auth/views.py"")"
+PyVul4LLMSec_142,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/user/auth/views.py,"   return redirect(request.GET.get('next', reverse('spirit:user:update')))","return safe_redirect(request, 'next', reverse('spirit:user:update'))
+",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/user/auth/views.py"")"
+PyVul4LLMSec_143,CVE-2022-0869,CWE-601,https://github.com/nitely/spirit,8f32f89654d6c30d56e0dd167059d32146fb32ef,spirit/user/auth/views.py,"return redirect(request.GET.get('next', reverse('spirit:user:update')))","return safe_redirect(request, 'next', reverse('spirit:user:update'))",,"=HYPERLINK(""https://github.com/nitely/spirit/commit/8f32f89654d6c30d56e0dd167059d32146fb32ef"",""spirit/user/auth/views.py"")"
+PyVul4LLMSec_144,CVE-2022-0697,CWE-601,https://github.com/archivy/archivy,2d8cb29853190d42572b36deb61127e68d6be574,archivy/routes.py,"
+            return redirect(next_url or ""/"")","  if next_url and is_safe_redirect_url(next_url):
+                return redirect(next_url)
+            else:
+                return redirect(""/"")",,"=HYPERLINK(""https://github.com/archivy/archivy/commit/2d8cb29853190d42572b36deb61127e68d6be574"",""archivy/routes.py"")"
+PyVul4LLMSec_145,CVE-2022-0645,CWE-601,https://github.com/posthog/posthog,859d8ed9ac7c5026db09714a26c85c1458abb038,posthog/api/decide.py,," origin = parse_domain(request.headers.get(""Origin""))
+    referer = parse_domain(request.headers.get(""Referer""))
+    return hostname_in_app_urls(team, origin) or hostname_in_app_urls(team, referer)
+
+
+def hostname_in_app_urls(team: Team, hostname: Optional[str]) -> bool:
+    if not hostname:
+        return False
+",,"=HYPERLINK(""https://github.com/posthog/posthog/commit/859d8ed9ac7c5026db09714a26c85c1458abb038"",""posthog/api/decide.py"")"
+PyVul4LLMSec_146,CVE-2022-0645,CWE-601,https://github.com/posthog/posthog,859d8ed9ac7c5026db09714a26c85c1458abb038,posthog/api/decide.py,," host = parse_domain(url)
+        if host:
+            permitted_domains.append(host)",,"=HYPERLINK(""https://github.com/posthog/posthog/commit/859d8ed9ac7c5026db09714a26c85c1458abb038"",""posthog/api/decide.py"")"
+PyVul4LLMSec_147,CVE-2022-0645,CWE-601,https://github.com/posthog/posthog,859d8ed9ac7c5026db09714a26c85c1458abb038,posthog/api/decide.py," pattern = ""^{}$"".format(permitted_domain.replace(""."", ""\\."").replace(""*"", ""(.*)""))
+            if (origin and re.search(pattern, origin)) or (referer and re.search(pattern, referer)):
+                return True
+        else:
+            if permitted_domain == origin or permitted_domain == referer:","pattern = ""^{}$"".format(re.escape(permitted_domain).replace(""\\*"", ""(.*)""))
+            if re.search(pattern, hostname):",,"=HYPERLINK(""https://github.com/posthog/posthog/commit/859d8ed9ac7c5026db09714a26c85c1458abb038"",""posthog/api/decide.py"")"
+PyVul4LLMSec_148,CVE-2022-0645,CWE-601,https://github.com/posthog/posthog,859d8ed9ac7c5026db09714a26c85c1458abb038,posthog/api/decide.py,,"        elif permitted_domain == hostname:
+            return True",,"=HYPERLINK(""https://github.com/posthog/posthog/commit/859d8ed9ac7c5026db09714a26c85c1458abb038"",""posthog/api/decide.py"")"
+PyVul4LLMSec_149,CVE-2022-0645,CWE-601,https://github.com/posthog/posthog,859d8ed9ac7c5026db09714a26c85c1458abb038,posthog/urls.py,,"if not current_team or not hostname_in_app_urls(current_team, redirect_url.hostname):
+        return HttpResponse(f""Can only redirect to a permitted domain."", status=400)",,"=HYPERLINK(""https://github.com/posthog/posthog/commit/859d8ed9ac7c5026db09714a26c85c1458abb038"",""posthog/urls.py"")"
+PyVul4LLMSec_150,CVE-2022-31040,CWE-601,https://github.com/open-formulieren/open-forms,3e8c9cce386e548765783354694fbb9d7a6ea7d3,src/openforms/utils/redirect.py,,"    # first, check if the URL is in ALLOWED_HOSTS. We deliberately exclude the wildcard
+    # setting to require explicit configuration either via ALLOWED_HOSTS or CORS_* settings.
+    allowed_hosts_check = url_has_allowed_host_and_scheme(
+        url=url,
+        allowed_hosts=[host for host in settings.ALLOWED_HOSTS if host != ""*""],
+        # settings.ALLOWED_HOSTS means we are serving the domain, so we can enforce our
+        # own custom HTTPS setting.
+        require_https=settings.IS_HTTPS,
+    )
+    # if we pass via ALLOWED_HOSTS, short-circuit, otherwise we check the CORS policy
+    # for allowed external domains.
+    if allowed_hosts_check:
+        return True",,"=HYPERLINK(""https://github.com/open-formulieren/open-forms/commit/3e8c9cce386e548765783354694fbb9d7a6ea7d3"",""src/openforms/utils/redirect.py"")"
+PyVul4LLMSec_151,CVE-2022-33146,CWE-601,https://github.com/web2py/web2py,a181b855a43cb8b479d276b082cfcde385768451,applications/admin/controllers/default.py, send = request.vars.send, send = prevent_open_redirect(request.vars.send),,"=HYPERLINK(""https://github.com/web2py/web2py/commit/a181b855a43cb8b479d276b082cfcde385768451"",""applications/admin/controllers/default.py"")"
+PyVul4LLMSec_152,CVE-2022-33146,CWE-601,https://github.com/web2py/web2py,d9805606f88f00c0be56438247605cefde73e14e,gluon/tools.py,"return self.prevent_open_redirect(next, host)", return prevent_open_redirect(next),,"=HYPERLINK(""https://github.com/web2py/web2py/commit/d9805606f88f00c0be56438247605cefde73e14e"",""gluon/tools.py"")"
+PyVul4LLMSec_153,CVE-2022-33146,CWE-601,https://github.com/web2py/web2py,d9805606f88f00c0be56438247605cefde73e14e,gluon/tools.py,"            next = request.get_vars._next \
+                or request.post_vars._next \","            next = prevent_open_redirect(request.get_vars._next) \
+                or prevent_open_redirect(request.post_vars._next) \",,"=HYPERLINK(""https://github.com/web2py/web2py/commit/d9805606f88f00c0be56438247605cefde73e14e"",""gluon/tools.py"")"
+PyVul4LLMSec_154,CVE-2022-33146,CWE-601,https://github.com/web2py/web2py,d9805606f88f00c0be56438247605cefde73e14e,gluon/tools.py,"    next = request.get_vars._next \
+                or request.post_vars._next \"," next = prevent_open_redirect(request.get_vars._next) \
+                or prevent_open_redirect(request.post_vars._next) \",,"=HYPERLINK(""https://github.com/web2py/web2py/commit/d9805606f88f00c0be56438247605cefde73e14e"",""gluon/tools.py"")"
+PyVul4LLMSec_155,CVE-2022-36087,CWE-601,https://github.com/oauthlib/oauthlib,2e40b412c844ecc4673c3fa3f72181f228bdbacd,oauthlib/uri_validate.py,"IPv6address = r""([A-Fa-f0-9:]+:+)+[A-Fa-f0-9]+""","IPv6address = r""([A-Fa-f0-9:]+[:$])[A-Fa-f0-9]{1,4}""",,"=HYPERLINK(""https://github.com/oauthlib/oauthlib/commit/2e40b412c844ecc4673c3fa3f72181f228bdbacd"",""oauthlib/uri_validate.py"")"
+PyVul4LLMSec_156,CVE-2022-3438,CWE-601,https://github.com/ikus060/rdiffweb,4d464b467f14b8eb9103d7f5f0774e49995527c7,rdiffweb/controller/page_admin_users.py,,"            validators.length(min=3, message=_('Username too short.')),
+            validators.regexp(UserObject.PATTERN_USERNAME, message=_('Must not contain any special characters.')),",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/4d464b467f14b8eb9103d7f5f0774e49995527c7"",""rdiffweb/controller/page_admin_users.py"")"
+PyVul4LLMSec_157,CVE-2022-3438,CWE-601,https://github.com/ikus060/rdiffweb,4d464b467f14b8eb9103d7f5f0774e49995527c7,rdiffweb/controller/page_admin_users.py,,"validators.regexp(UserObject.PATTERN_FULLNAME, message=_('Must not contain any special characters.')),",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/4d464b467f14b8eb9103d7f5f0774e49995527c7"",""rdiffweb/controller/page_admin_users.py"")"
+PyVul4LLMSec_158,CVE-2022-3438,CWE-601,https://github.com/ikus060/rdiffweb,4d464b467f14b8eb9103d7f5f0774e49995527c7,rdiffweb/controller/page_admin_users.py,," validators.regexp(UserObject.PATTERN_EMAIL, message=_('Must be a valid email address.')),",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/4d464b467f14b8eb9103d7f5f0774e49995527c7"",""rdiffweb/controller/page_admin_users.py"")"
+PyVul4LLMSec_159,CVE-2022-3438,CWE-601,https://github.com/ikus060/rdiffweb,4d464b467f14b8eb9103d7f5f0774e49995527c7,rdiffweb/controller/page_pref_general.py,,"Regexp(UserObject.PATTERN_FULLNAME, message=_('Must not contain any special characters.')),",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/4d464b467f14b8eb9103d7f5f0774e49995527c7"",""rdiffweb/controller/page_pref_general.py"")"
+PyVul4LLMSec_160,CVE-2022-3438,CWE-601,https://github.com/ikus060/rdiffweb,4d464b467f14b8eb9103d7f5f0774e49995527c7,rdiffweb/controller/page_pref_general.py,"      Length(max=256, message=_(""Invalid email."")),
+            Regexp(PATTERN_EMAIL, message=_(""Invalid email."")),","Length(max=256, message=_(""Email too long."")),
+            Regexp(UserObject.PATTERN_EMAIL, message=_(""Must be a valid email address."")),",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/4d464b467f14b8eb9103d7f5f0774e49995527c7"",""rdiffweb/controller/page_pref_general.py"")"
+PyVul4LLMSec_161,CVE-2022-3438,CWE-601,https://github.com/ikus060/rdiffweb,4d464b467f14b8eb9103d7f5f0774e49995527c7,rdiffweb/core/model/_user.py,," # Regex pattern to be used for validation.
+    PATTERN_EMAIL = r""[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$""
+    PATTERN_FULLNAME = r""""""[^!""#$%&()*+,./:;<=>?@[\]_{|}~]+$""""""
+    PATTERN_USERNAME = r""[a-zA-Z0-9_.\-]+$""",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/4d464b467f14b8eb9103d7f5f0774e49995527c7"",""rdiffweb/core/model/_user.py"")"
+PyVul4LLMSec_162,CVE-2022-4589,CWE-601,https://github.com/cyface/django-termsandconditions,03396a1c2e0af95e12a45c5faef7e47a4b513e1a,termsandconditions/views.py,"    return_to = self.request.GET.get(""returnTo"", ""/"")", return_to = self.get_return_to(self.request.GET),,"=HYPERLINK(""https://github.com/cyface/django-termsandconditions/commit/03396a1c2e0af95e12a45c5faef7e47a4b513e1a"",""termsandconditions/views.py"")"
+PyVul4LLMSec_163,CVE-2022-4589,CWE-601,https://github.com/cyface/django-termsandconditions,03396a1c2e0af95e12a45c5faef7e47a4b513e1a,termsandconditions/views.py,"   return_url = request.POST.get(""returnTo"", ""/"")", return_url = self.get_return_to(self.request.POST),,"=HYPERLINK(""https://github.com/cyface/django-termsandconditions/commit/03396a1c2e0af95e12a45c5faef7e47a4b513e1a"",""termsandconditions/views.py"")"
+PyVul4LLMSec_164,CVE-2022-4589,CWE-601,https://github.com/cyface/django-termsandconditions,03396a1c2e0af95e12a45c5faef7e47a4b513e1a,termsandconditions/views.py,"
+        return_to = self.request.GET.get(""returnTo"", ""/"")"," return_to = self.get_return_to(self.request.GET)
+",,"=HYPERLINK(""https://github.com/cyface/django-termsandconditions/commit/03396a1c2e0af95e12a45c5faef7e47a4b513e1a"",""termsandconditions/views.py"")"
+PyVul4LLMSec_165,CVE-2022-4589,CWE-601,https://github.com/cyface/django-termsandconditions,03396a1c2e0af95e12a45c5faef7e47a4b513e1a,termsandconditions/views.py,"
+        self.success_url = form.cleaned_data.get(""returnTo"", ""/"") or ""/""", self.success_url = self.get_return_to(form.cleaned_data),,"=HYPERLINK(""https://github.com/cyface/django-termsandconditions/commit/03396a1c2e0af95e12a45c5faef7e47a4b513e1a"",""termsandconditions/views.py"")"
+PyVul4LLMSec_166,CVE-2022-4644,CWE-601,https://github.com/ikus060/rdiffweb,5f861670ef8f38ca8eea52a98672d0e0fabb5368,rdiffweb/rdw_app.py,@cherrypy.tools.proxy(remote='X-Real-IP'),"@cherrypy.tools.proxy(local=None, remote='X-Real-IP')",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/5f861670ef8f38ca8eea52a98672d0e0fabb5368"",""rdiffweb/rdw_app.py"")"
+PyVul4LLMSec_167,CVE-2022-3221,CWE-352,https://github.com/ikus060/rdiffweb,9125f5a2d918fed0f3fc1c86fa94cd1779ed9f73,rdiffweb/controller/pref_sshkeys.py,"     if action == ""add"":"," delete_form = DeleteSshForm()
+        if action == ""add"" and form.is_submitted():",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/9125f5a2d918fed0f3fc1c86fa94cd1779ed9f73"",""rdiffweb/controller/pref_sshkeys.py"")"
+PyVul4LLMSec_168,CVE-2022-3221,CWE-352,https://github.com/ikus060/rdiffweb,9125f5a2d918fed0f3fc1c86fa94cd1779ed9f73,rdiffweb/controller/pref_sshkeys.py,      elif action == 'delete':, elif action == 'delete' and delete_form.is_submitted():,,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/9125f5a2d918fed0f3fc1c86fa94cd1779ed9f73"",""rdiffweb/controller/pref_sshkeys.py"")"
+PyVul4LLMSec_169,CVE-2022-3232,CWE-352,https://github.com/ikus060/rdiffweb,422791ea45713aaaa865bdca74addb9fffd93a71,rdiffweb/controller/page_admin.py," self._delete_user(action, DeleteUserForm())","form = DeleteUserForm()
+            if form.validate_on_submit():
+                self._delete_user(action, form)",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/422791ea45713aaaa865bdca74addb9fffd93a71"",""rdiffweb/controller/page_admin.py"")"
+PyVul4LLMSec_170,CVE-2022-3232,CWE-352,https://github.com/ikus060/rdiffweb,422791ea45713aaaa865bdca74addb9fffd93a71,rdiffweb/controller/page_delete.py,"    confirm = StringField(_('Confirmation'), validators=[validators.data_required()])
+    redirect = StringField(default='/')"," confirm = StringField(_('Confirmation'), validators=[DataRequired()])
+
+    def validate_confirm(self, field):
+        if self.confirm.data != self.expected_confirm:
+            raise ValidationError(_('Invalid value, must be: %s') % self.expected_confirm)",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/422791ea45713aaaa865bdca74addb9fffd93a71"",""rdiffweb/controller/page_delete.py"")"
+PyVul4LLMSec_171,CVE-2022-3233,CWE-352,https://github.com/ikus060/rdiffweb,18a5aabd48fa6d2d2771a25f95610c28a1a097ca,rdiffweb/controller/pref_notification.py,"   if action == ""set_notification_info"":"," if cherrypy.request.method == 'POST' and action == ""set_notification_info"":",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/18a5aabd48fa6d2d2771a25f95610c28a1a097ca"",""rdiffweb/controller/pref_notification.py"")"
+PyVul4LLMSec_172,CVE-2022-3267,CWE-352,https://github.com/ikus060/rdiffweb,20fc0d304412cc569b21f31e52cb8b94094d6314,rdiffweb/controller/page_settings.py,"if kwargs.get('keepdays'):
+            return self._remove_older(repo_obj, **kwargs)
+        elif kwargs.get('new_encoding'):
+            return self._set_encoding(repo_obj, **kwargs)
+        elif kwargs.get('maxage'):
+            return self._set_maxage(repo_obj, **kwargs)","    if cherrypy.request.method == 'POST':
+            if kwargs.get('keepdays'):
+                return self._remove_older(repo_obj, **kwargs)
+            elif kwargs.get('new_encoding'):
+                return self._set_encoding(repo_obj, **kwargs)
+            elif kwargs.get('maxage'):
+                return self._set_maxage(repo_obj, **kwargs)",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/20fc0d304412cc569b21f31e52cb8b94094d6314"",""rdiffweb/controller/page_settings.py"")"
+PyVul4LLMSec_173,CVE-2022-3274,CWE-352,https://github.com/ikus060/rdiffweb,e974df75bdbcff3996ad70bd1b4424ec1485ea3f,rdiffweb/controller/pref_general.py,"      if action == ""set_profile_info"":
+            self._handle_set_profile_info(action, profile_form)
+        elif action == ""set_password"":
+            self._handle_set_password(action, password_form)
+        elif action == ""update_repos"":
+            self.app.currentuser.refresh_repos(delete=True)
+            flash(_(""Repositories successfully updated""), level='success')
+        elif action is None:
+            pass
+        else:
+            _logger.warning(""unknown action: %s"", action)
+            raise cherrypy.NotFound(""Unknown action"")","        if cherrypy.request.method == 'POST':
+            if action == ""set_profile_info"":
+                self._handle_set_profile_info(action, profile_form)
+            elif action == ""set_password"":
+                self._handle_set_password(action, password_form)
+            elif action == ""update_repos"":
+                self.app.currentuser.refresh_repos(delete=True)
+                flash(_(""Repositories successfully updated""), level='success')
+            elif action is None:
+                pass
+            else:
+                _logger.warning(""unknown action: %s"", action)
+                raise cherrypy.NotFound(""Unknown action"")",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/e974df75bdbcff3996ad70bd1b4424ec1485ea3f"",""rdiffweb/controller/pref_general.py"")"
+PyVul4LLMSec_174,CVE-2022-39268,CWE-352,https://github.com/orchest/orchest,c2587a963cca742c4a2503bce4cfb4161bf64c2d,services/auth-server/app/app/views.py,"        resp.set_cookie(""auth_token"", """")
+        resp.set_cookie(""auth_username"", """")","        resp.set_cookie(""auth_token"", """", samesite=""Lax"")
+        resp.set_cookie(""auth_username"", samesite=""Lax"")",,"=HYPERLINK(""https://github.com/orchest/orchest/commit/c2587a963cca742c4a2503bce4cfb4161bf64c2d"",""services/auth-server/app/app/views.py"")"
+PyVul4LLMSec_175,CVE-2022-39268,CWE-352,https://github.com/orchest/orchest,c2587a963cca742c4a2503bce4cfb4161bf64c2d,services/auth-server/app/app/views.py,"           resp.set_cookie(""auth_token"", token.token)
+                    resp.set_cookie(""auth_username"", username)","                    # samesite=""Lax"" to avoid CSRF attacks.
+                    resp.set_cookie(""auth_token"", token.token, samesite=""Lax"")
+                    resp.set_cookie(""auth_username"", username, samesite=""Lax"")",,"=HYPERLINK(""https://github.com/orchest/orchest/commit/c2587a963cca742c4a2503bce4cfb4161bf64c2d"",""services/auth-server/app/app/views.py"")"
+PyVul4LLMSec_176,CVE-2022-4646,CWE-352,https://github.com/ikus060/rdiffweb,e6f0d8002129be90fe82fa3e3ea0a6942caba398,rdiffweb/tools/auth_form.py,,"           if request.method != 'POST':
+                raise cherrypy.HTTPError(405)",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/e6f0d8002129be90fe82fa3e3ea0a6942caba398"",""rdiffweb/tools/auth_form.py"")"
+PyVul4LLMSec_177,CVE-2023-0398,CWE-352,https://github.com/modoboa/modoboa,8e14ac93669df4f35fcdebd55dc9d2f0fed3ed48,modoboa/admin/views/domain.py,,"@require_http_methods([""POST""])",,"=HYPERLINK(""https://github.com/modoboa/modoboa/commit/8e14ac93669df4f35fcdebd55dc9d2f0fed3ed48"",""modoboa/admin/views/domain.py"")"
+PyVul4LLMSec_178,CVE-2023-0406,CWE-352,https://github.com/modoboa/modoboa,7f0573e917227686d2cc127be1364e2908740807,modoboa/admin/views/identity.py,,"@require_http_methods([""POST""])",,"=HYPERLINK(""https://github.com/modoboa/modoboa/commit/7f0573e917227686d2cc127be1364e2908740807"",""modoboa/admin/views/identity.py"")"
+PyVul4LLMSec_179,CVE-2023-0438,CWE-352,https://github.com/modoboa/modoboa,38d778cc71e370216e067d054ce0169ad83078c8,modoboa/admin/views/identity.py,,"@require_http_methods([""DELETE""])",,"=HYPERLINK(""https://github.com/modoboa/modoboa/commit/38d778cc71e370216e067d054ce0169ad83078c8"",""modoboa/admin/views/identity.py"")"
+PyVul4LLMSec_180,CVE-2023-2228,CWE-352,https://github.com/modoboa/modoboa,5d886f3d06373d2c3292911bac0772bcd5102343,modoboa/admin/views/domain.py,,"@require_http_methods([""POST""])",,"=HYPERLINK(""https://github.com/modoboa/modoboa/commit/5d886f3d06373d2c3292911bac0772bcd5102343"",""modoboa/admin/views/domain.py"")"
+PyVul4LLMSec_181,CVE-2023-2228,CWE-352,https://github.com/modoboa/modoboa,5d886f3d06373d2c3292911bac0772bcd5102343,modoboa/admin/views/domain.py,,"@require_http_methods([""POST""])",,"=HYPERLINK(""https://github.com/modoboa/modoboa/commit/5d886f3d06373d2c3292911bac0772bcd5102343"",""modoboa/admin/views/domain.py"")"
+PyVul4LLMSec_182,CVE-2023-25802,CWE-22,https://github.com/hap-wi/roxy-wi,0054f25da7cf8c7480452f48e39308b5e392dc67,app/modules/server/ssh.py,,"if '..' in name:
+		print('error: nice try')
+		return False
+",,"=HYPERLINK(""https://github.com/hap-wi/roxy-wi/commit/0054f25da7cf8c7480452f48e39308b5e392dc67"",""app/modules/server/ssh.py"")"
+PyVul4LLMSec_183,CVE-2022-3295,CWE-770,https://github.com/ikus060/rdiffweb,667657c6fe2b336c90be37f37fb92f65df4feee3,rdiffweb/controller/page_admin.py,"username = StringField(_('Username'), validators=[validators.data_required()])","    username = StringField(
+        _('Username'),
+        validators=[
+            validators.data_required(),
+            validators.length(max=256, message=_('Username too long.')),
+        ],
+    )",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/667657c6fe2b336c90be37f37fb92f65df4feee3"",""rdiffweb/controller/page_admin.py"")"
+PyVul4LLMSec_184,CVE-2022-3295,CWE-770,https://github.com/ikus060/rdiffweb,667657c6fe2b336c90be37f37fb92f65df4feee3,rdiffweb/controller/page_admin.py," _('Root directory'), description=_(""Absolute path defining the location of the repositories for this user."")"," _('Root directory'),
+        description=_(""Absolute path defining the location of the repositories for this user.""),
+        validators=[
+            validators.length(max=MAX_PATH, message=_('Root directory too long.')),
+        ],",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/667657c6fe2b336c90be37f37fb92f65df4feee3"",""rdiffweb/controller/page_admin.py"")"
+PyVul4LLMSec_185,CVE-2022-3295,CWE-770,https://github.com/ikus060/rdiffweb,667657c6fe2b336c90be37f37fb92f65df4feee3,rdiffweb/controller/page_login.py,"    validators=[InputRequired()],"," validators=[InputRequired(), Length(max=256, message=_('Username too long.'))],",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/667657c6fe2b336c90be37f37fb92f65df4feee3"",""rdiffweb/controller/page_login.py"")"
+PyVul4LLMSec_186,CVE-2022-3295,CWE-770,https://github.com/ikus060/rdiffweb,667657c6fe2b336c90be37f37fb92f65df4feee3,rdiffweb/controller/pref_general.py,"   email = EmailField(_('Email'), validators=[DataRequired(), Regexp(PATTERN_EMAIL, message=_(""Invalid email.""))])","email = EmailField(
+        _('Email'),
+        validators=[
+            DataRequired(),
+            Length(max=256, message=_(""Invalid email."")),
+            Regexp(PATTERN_EMAIL, message=_(""Invalid email."")),
+        ],
+    )",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/667657c6fe2b336c90be37f37fb92f65df4feee3"",""rdiffweb/controller/pref_general.py"")"
+PyVul4LLMSec_187,CVE-2022-3295,CWE-770,https://github.com/ikus060/rdiffweb,667657c6fe2b336c90be37f37fb92f65df4feee3,rdiffweb/controller/page_admin.py,"   email = EmailField(_('Email'), validators=[validators.optional()])","email = EmailField(
+        _('Email'),
+        validators=[
+            validators.optional(),
+            validators.length(max=256, message=_('Email too long.')),
+        ],
+    )",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/667657c6fe2b336c90be37f37fb92f65df4feee3"",""rdiffweb/controller/page_admin.py"")"
+PyVul4LLMSec_188,CVE-2022-3298,CWE-770,https://github.com/ikus060/rdiffweb,626cca1b75b6c587afd4241a9692e8929b1921a5,rdiffweb/controller/pref_sshkeys.py,"validators=[validators.data_required()],","validators=[
+            validators.data_required(),
+            validators.length(
+                max=256,
+                message=_('Title too long.'),
+            ),
+        ],",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/626cca1b75b6c587afd4241a9692e8929b1921a5"",""rdiffweb/controller/pref_sshkeys.py"")"
+PyVul4LLMSec_189,CVE-2022-3364,CWE-770,https://github.com/ikus060/rdiffweb,b62c479ff6979563c7c23e7182942bc4f460a2c7,rdiffweb/controller/page_admin_users.py,"  fullname = StringField(_('Fullname'), validators=[validators.optional()])","  fullname = StringField(
+        _('Fullname'),
+        validators=[
+            validators.optional(),
+            validators.length(max=256, message=_('Fullname too long.')),
+        ],
+    )",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b62c479ff6979563c7c23e7182942bc4f460a2c7"",""rdiffweb/controller/page_admin_users.py"")"
+PyVul4LLMSec_190,CVE-2022-3364,CWE-770,https://github.com/ikus060/rdiffweb,b62c479ff6979563c7c23e7182942bc4f460a2c7,rdiffweb/controller/page_pref_general.py, fullname = StringField(_('Fullname'))," fullname = StringField(
+        _('Fullname'),
+        validators=[
+            Optional(),
+            Length(max=256, message=_('Fullname too long.')),
+        ],
+    )",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b62c479ff6979563c7c23e7182942bc4f460a2c7"",""rdiffweb/controller/page_pref_general.py"")"
+PyVul4LLMSec_191,CVE-2022-3364,CWE-770,https://github.com/ikus060/rdiffweb,b62c479ff6979563c7c23e7182942bc4f460a2c7,rdiffweb/controller/page_pref_tokens.py,"     validators=[DataRequired()],"," validators=[
+            DataRequired(),
+            Length(max=256, message=_('Token name too long')),
+        ],",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b62c479ff6979563c7c23e7182942bc4f460a2c7"",""rdiffweb/controller/page_pref_tokens.py"")"
+PyVul4LLMSec_192,CVE-2022-3273,CWE-770,https://github.com/ikus060/rdiffweb,b5e3bb0a98268d18ceead36ab9b2b7eaacd659a8,rdiffweb/core/login.py,"    if user and check_password(password, user.hash_password):",if user and user.validate_password(password):,,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b5e3bb0a98268d18ceead36ab9b2b7eaacd659a8"",""rdiffweb/core/login.py"")"
+PyVul4LLMSec_193,CVE-2022-3456,CWE-770,https://github.com/ikus060/rdiffweb,b78ec09f4582e363f6f449df6f987127e126c311,rdiffweb/controller/api.py,, cherrypy.tools.ratelimit.hit(),,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b78ec09f4582e363f6f449df6f987127e126c311"",""rdiffweb/controller/api.py"")"
+PyVul4LLMSec_194,CVE-2022-3456,CWE-770,https://github.com/ikus060/rdiffweb,b78ec09f4582e363f6f449df6f987127e126c311,rdiffweb/controller/api.py,"   return any(cherrypy.engine.publish('login', username, password))","  valid = any(cherrypy.engine.publish('login', username, password))
+    if not valid:
+        # When invalid, we need to increase the rate limit.
+        cherrypy.tools.ratelimit.hit()
+    return valid",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b78ec09f4582e363f6f449df6f987127e126c311"",""rdiffweb/controller/api.py"")"
+PyVul4LLMSec_195,CVE-2022-3456,CWE-770,https://github.com/ikus060/rdiffweb,b78ec09f4582e363f6f449df6f987127e126c311,rdiffweb/controller/api.py,"@cherrypy.tools.sessions(on=False)
+@cherrypy.tools.ratelimit()","@cherrypy.tools.ratelimit(scope='rdiffweb-api', hit=0, priority=69)
+@cherrypy.tools.sessions(on=False)",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b78ec09f4582e363f6f449df6f987127e126c311"",""rdiffweb/controller/api.py"")"
+PyVul4LLMSec_196,CVE-2022-3456,CWE-770,https://github.com/ikus060/rdiffweb,b78ec09f4582e363f6f449df6f987127e126c311,rdiffweb/controller/page_login.py,  @cherrypy.tools.ratelimit(),  @cherrypy.tools.ratelimit(methods=['POST']),,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b78ec09f4582e363f6f449df6f987127e126c311"",""rdiffweb/controller/page_login.py"")"
+PyVul4LLMSec_197,CVE-2022-3456,CWE-770,https://github.com/ikus060/rdiffweb,b78ec09f4582e363f6f449df6f987127e126c311,rdiffweb/controller/page_mfa.py,  @cherrypy.tools.ratelimit(),  @cherrypy.tools.ratelimit(methods=['POST']),,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b78ec09f4582e363f6f449df6f987127e126c311"",""rdiffweb/controller/page_mfa.py"")"
+PyVul4LLMSec_198,CVE-2022-3456,CWE-770,https://github.com/ikus060/rdiffweb,b78ec09f4582e363f6f449df6f987127e126c311,rdiffweb/controller/page_pref_general.py,," @cherrypy.tools.ratelimit(methods=['POST'], logout=True)",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b78ec09f4582e363f6f449df6f987127e126c311"",""rdiffweb/controller/page_pref_general.py"")"
+PyVul4LLMSec_199,CVE-2022-3456,CWE-770,https://github.com/ikus060/rdiffweb,b78ec09f4582e363f6f449df6f987127e126c311,rdiffweb/tools/ratelimit.py,tracker = tracker._replace(hits=tracker.hits + 1), tracker = tracker._replace(hits=tracker.hits + hit),,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b78ec09f4582e363f6f449df6f987127e126c311"",""rdiffweb/tools/ratelimit.py"")"
+PyVul4LLMSec_200,CVE-2022-3456,CWE-770,https://github.com/ikus060/rdiffweb,b78ec09f4582e363f6f449df6f987127e126c311,rdiffweb/tools/ratelimit.py,"
+    Usage:","# Check if limit is enabled
+    if limit <= 0:
+        return
+",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b78ec09f4582e363f6f449df6f987127e126c311"",""rdiffweb/tools/ratelimit.py"")"
+PyVul4LLMSec_201,CVE-2022-3456,CWE-770,https://github.com/ikus060/rdiffweb,b78ec09f4582e363f6f449df6f987127e126c311,rdiffweb/tools/ratelimit.py,    cherrypy._ratelimit_datastore = datastore,"  cherrypy.request.app._ratelimit_datastore = datastore
+",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b78ec09f4582e363f6f449df6f987127e126c311"",""rdiffweb/tools/ratelimit.py"")"
+PyVul4LLMSec_202,CVE-2022-3456,CWE-770,https://github.com/ikus060/rdiffweb,b78ec09f4582e363f6f449df6f987127e126c311,rdiffweb/tools/ratelimit.py,"  hits = datastore.get_and_increment(token, delay)"," hits = datastore.get_and_increment(token, delay, hit)",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b78ec09f4582e363f6f449df6f987127e126c311"",""rdiffweb/tools/ratelimit.py"")"
+PyVul4LLMSec_203,CVE-2022-3456,CWE-770,https://github.com/ikus060/rdiffweb,b78ec09f4582e363f6f449df6f987127e126c311,rdiffweb/tools/ratelimit.py,"    @cherrypy.tools.ratelimit(on=True, anonymous_limit=5, registered_limit=50, storage_class=FileRateLimit, storage_path='/tmp')
+    def index(self):
+        pass
+    """""""," # Check if this 'method' should be rate limited
+    request = cherrypy.request
+    if methods is not None and request.method not in methods:
+        if debug:
+            cherrypy.log(
+                'skip rate limit for HTTP method %s' % (request.method,),
+                'TOOLS.RATELIMIT',
+            )
+        return",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b78ec09f4582e363f6f449df6f987127e126c311"",""rdiffweb/tools/ratelimit.py"")"
+PyVul4LLMSec_204,CVE-2022-3456,CWE-770,https://github.com/ikus060/rdiffweb,b78ec09f4582e363f6f449df6f987127e126c311,rdiffweb/tools/ratelimit.py,"   datastore = getattr(cherrypy, '_ratelimit_datastore', None)"," datastore = getattr(cherrypy.request.app, '_ratelimit_datastore', None)",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b78ec09f4582e363f6f449df6f987127e126c311"",""rdiffweb/tools/ratelimit.py"")"
+PyVul4LLMSec_205,CVE-2022-3456,CWE-770,https://github.com/ikus060/rdiffweb,b78ec09f4582e363f6f449df6f987127e126c311,rdiffweb/tools/ratelimit.py,,cherrypy.tools.ratelimit.hit = hit,,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/b78ec09f4582e363f6f449df6f987127e126c311"",""rdiffweb/tools/ratelimit.py"")"
+PyVul4LLMSec_206,CVE-2022-4723,CWE-770,https://github.com/ikus060/rdiffweb,6e9ee210548f6d3210704cac302cfc7cdb239765,rdiffweb/controller/page_pref_mfa.py,, @cherrypy.tools.ratelimit(methods=['POST']),,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/6e9ee210548f6d3210704cac302cfc7cdb239765"",""rdiffweb/controller/page_pref_mfa.py"")"
+PyVul4LLMSec_207,CVE-2023-25577,CWE-770,https://github.com/pallets/werkzeug,517cac5a804e8c4dc4ed038bb20dacd038e7a9f1,src/werkzeug/formparser.py,,"max_form_parts=self.max_form_parts,",289.0,"=HYPERLINK(""https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1"",""src/werkzeug/formparser.py"")"
+PyVul4LLMSec_208,CVE-2023-25577,CWE-770,https://github.com/pallets/werkzeug,517cac5a804e8c4dc4ed038bb20dacd038e7a9f1,src/werkzeug/sansio/multipart.py,,"                self._parts_decoded += 1
+
+                if self.max_parts is not None and self._parts_decoded > self.max_parts:
+                    raise RequestEntityTooLarge()",198.0,"=HYPERLINK(""https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1"",""src/werkzeug/sansio/multipart.py"")"
+PyVul4LLMSec_209,CVE-2023-25577,CWE-770,https://github.com/pallets/werkzeug,517cac5a804e8c4dc4ed038bb20dacd038e7a9f1,src/werkzeug/formparser.py,," *,
+        max_form_parts: t.Optional[int] = None,",195.0,"=HYPERLINK(""https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1"",""src/werkzeug/formparser.py"")"
+PyVul4LLMSec_210,CVE-2023-25577,CWE-770,https://github.com/pallets/werkzeug,517cac5a804e8c4dc4ed038bb20dacd038e7a9f1,src/werkzeug/formparser.py,, self.max_form_parts = max_form_parts,206.0,"=HYPERLINK(""https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1"",""src/werkzeug/formparser.py"")"
+PyVul4LLMSec_211,CVE-2023-25577,CWE-770,https://github.com/pallets/werkzeug,517cac5a804e8c4dc4ed038bb20dacd038e7a9f1,src/werkzeug/formparser.py,,"max_form_parts=self.max_form_parts,",289.0,"=HYPERLINK(""https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1"",""src/werkzeug/formparser.py"")"
+PyVul4LLMSec_212,CVE-2023-25577,CWE-770,https://github.com/pallets/werkzeug,517cac5a804e8c4dc4ed038bb20dacd038e7a9f1,src/werkzeug/formparser.py,," max_form_parts: t.Optional[int] = None,",355.0,"=HYPERLINK(""https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1"",""src/werkzeug/formparser.py"")"
+PyVul4LLMSec_213,CVE-2023-25577,CWE-770,https://github.com/pallets/werkzeug,517cac5a804e8c4dc4ed038bb20dacd038e7a9f1,src/werkzeug/formparser.py,, self.max_form_parts = max_form_parts,360.0,"=HYPERLINK(""https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1"",""src/werkzeug/formparser.py"")"
+PyVul4LLMSec_214,CVE-2023-25577,CWE-770,https://github.com/pallets/werkzeug,517cac5a804e8c4dc4ed038bb20dacd038e7a9f1,src/werkzeug/formparser.py,"    parser = MultipartDecoder(boundary, self.max_form_memory_size)","parser = MultipartDecoder(
+            boundary, self.max_form_memory_size, max_parts=self.max_form_parts
+        )",420.0,"=HYPERLINK(""https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1"",""src/werkzeug/formparser.py"")"
+PyVul4LLMSec_215,CVE-2023-25577,CWE-770,https://github.com/pallets/werkzeug,517cac5a804e8c4dc4ed038bb20dacd038e7a9f1,src/werkzeug/sansio/multipart.py,," *,
+        max_parts: Optional[int] = None,",90.0,"=HYPERLINK(""https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1"",""src/werkzeug/sansio/multipart.py"")"
+PyVul4LLMSec_216,CVE-2023-25577,CWE-770,https://github.com/pallets/werkzeug,517cac5a804e8c4dc4ed038bb20dacd038e7a9f1,src/werkzeug/sansio/multipart.py,,self.max_parts = max_parts,96.0,"=HYPERLINK(""https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1"",""src/werkzeug/sansio/multipart.py"")"
+PyVul4LLMSec_217,CVE-2023-25577,CWE-770,https://github.com/pallets/werkzeug,517cac5a804e8c4dc4ed038bb20dacd038e7a9f1,src/werkzeug/sansio/multipart.py,,        self._parts_decoded = 0,124.0,"=HYPERLINK(""https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1"",""src/werkzeug/sansio/multipart.py"")"
+PyVul4LLMSec_218,CVE-2023-25577,CWE-770,https://github.com/pallets/werkzeug,517cac5a804e8c4dc4ed038bb20dacd038e7a9f1,src/werkzeug/sansio/multipart.py,," self._parts_decoded += 1
+
+                if self.max_parts is not None and self._parts_decoded > self.max_parts:
+                    raise RequestEntityTooLarge()",198.0,"=HYPERLINK(""https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1"",""src/werkzeug/sansio/multipart.py"")"
+PyVul4LLMSec_219,CVE-2023-25171,CWE-770,https://github.com/kiwitcms/Kiwi,761305d04f5910ba14cc04d1255a8f1afdbb87f3,tcms/kiwi_auth/forms.py,,"    captcha = (
+        fields.CaptchaField(
+            widget=CustomCaptchaTextInput(attrs={""class"": ""form-control""})
+        )
+        if settings.USE_CAPTCHA
+        else None
+    )",97.0,"=HYPERLINK(""https://github.com/kiwitcms/Kiwi/commit/761305d04f5910ba14cc04d1255a8f1afdbb87f3"",""tcms/kiwi_auth/forms.py"")"
+PyVul4LLMSec_220,CVE-2023-25578,CWE-770,https://github.com/starlite-api/starlite,9674fe803628f986c03fe60769048cbc55b5bf83,starlite/connection/request.py,"    body=await self.body(), boundary=options.get(""boundary"", """").encode()","body=await self.body(),
+                    boundary=options.get(""boundary"", """").encode(),
+                    multipart_form_part_limit=self.app.multipart_form_part_limit,",,"=HYPERLINK(""https://github.com/starlite-api/starlite/commit/9674fe803628f986c03fe60769048cbc55b5bf83"",""starlite/connection/request.py"")"
+PyVul4LLMSec_221,CVE-2023-25578,CWE-770,https://github.com/starlite-api/starlite,9674fe803628f986c03fe60769048cbc55b5bf83,starlite/kwargs/extractors.py,starlite/kwargs/extractors.py,"  body_kwarg_multipart_form_part_limit: Optional[int] = None
+    if signature_field.kwarg_model and isinstance(signature_field.kwarg_model, BodyKwarg):
+        body_kwarg_multipart_form_part_limit = signature_field.kwarg_model.multipart_form_part_limit",293.0,"=HYPERLINK(""https://github.com/starlite-api/starlite/commit/9674fe803628f986c03fe60769048cbc55b5bf83"",""starlite/kwargs/extractors.py"")"
+PyVul4LLMSec_222,CVE-2023-25578,CWE-770,https://github.com/starlite-api/starlite,9674fe803628f986c03fe60769048cbc55b5bf83,starlite/kwargs/extractors.py,,"multipart_form_part_limit = (
+            body_kwarg_multipart_form_part_limit
+            if body_kwarg_multipart_form_part_limit is not None
+            else connection.app.multipart_form_part_limit
+        )",300.0,"=HYPERLINK(""https://github.com/starlite-api/starlite/commit/9674fe803628f986c03fe60769048cbc55b5bf83"",""starlite/kwargs/extractors.py"")"
+PyVul4LLMSec_223,CVE-2023-25578,CWE-770,https://github.com/starlite-api/starlite,9674fe803628f986c03fe60769048cbc55b5bf83,starlite/kwargs/extractors.py," body=await connection.body(), boundary=connection.content_type[-1].get(""boundary"", """").encode()","  body=await connection.body(),
+                boundary=connection.content_type[-1].get(""boundary"", """").encode(),
+                multipart_form_part_limit=multipart_form_part_limit,",,"=HYPERLINK(""https://github.com/starlite-api/starlite/commit/9674fe803628f986c03fe60769048cbc55b5bf83"",""starlite/kwargs/extractors.py"")"
+PyVul4LLMSec_224,CVE-2023-25578,CWE-770,https://github.com/starlite-api/starlite,9674fe803628f986c03fe60769048cbc55b5bf83,starlite/app.py,,"multipart_form_part_limit=multipart_form_part_limit,",307.0,"=HYPERLINK(""https://github.com/starlite-api/starlite/commit/9674fe803628f986c03fe60769048cbc55b5bf83"",""starlite/app.py"")"
+PyVul4LLMSec_225,CVE-2023-25578,CWE-770,https://github.com/starlite-api/starlite,9674fe803628f986c03fe60769048cbc55b5bf83,starlite/params.py,   regex: Optional[str] = None," regex: Optional[str] = None,
+    multipart_form_part_limit: Optional[int] = None",318.0,"=HYPERLINK(""https://github.com/starlite-api/starlite/commit/9674fe803628f986c03fe60769048cbc55b5bf83"",""starlite/params.py"")"
+PyVul4LLMSec_226,CVE-2023-25578,CWE-770,https://github.com/starlite-api/starlite,9674fe803628f986c03fe60769048cbc55b5bf83,starlite/params.py,," multipart_form_part_limit=multipart_form_part_limit,",382.0,"=HYPERLINK(""https://github.com/starlite-api/starlite/commit/9674fe803628f986c03fe60769048cbc55b5bf83"",""starlite/params.py"")"
+PyVul4LLMSec_227,CVE-2022-21683,CWE-200,https://github.com/wagtail/wagtail,5fe901e5d86ed02dbbb63039a897582951266afd,wagtail/admin/views/pages/edit.py,"        thread_users = get_user_model().objects.exclude(pk=self.request.user.pk).exclude(pk__in=subscribers.values_list('user_id', flat=True)).prefetch_related(","      thread_users = get_user_model().objects.exclude(pk=self.request.user.pk).exclude(pk__in=subscribers.values_list('user_id', flat=True)).filter(
+            Q(comment_replies__comment_id__in=relevant_comment_ids) | Q(**{('%s__pk__in' % COMMENTS_RELATION_NAME): relevant_comment_ids})
+        ).prefetch_related(",,"=HYPERLINK(""https://github.com/wagtail/wagtail/commit/5fe901e5d86ed02dbbb63039a897582951266afd"",""wagtail/admin/views/pages/edit.py"")"
+PyVul4LLMSec_228,CVE-2022-0577,CWE-200,https://github.com/scrapy/scrapy,8ce01b3b76d4634f55067d6cfdf632ec70ba304a,scrapy/downloadermiddlewares/redirect.py,"        redirected = request.replace(url=redirect_url, method='GET', body='')
+        redirected.headers.pop('Content-Type', None)
+        redirected.headers.pop('Content-Length', None)
+        return redirected"," redirect_request = _build_redirect_request(
+            request,
+            url=redirect_url,
+            method='GET',
+            body='',
+        )
+        redirect_request.headers.pop('Content-Type', None)
+        redirect_request.headers.pop('Content-Length', None)
+        return redirect_request
+",,"=HYPERLINK(""https://github.com/scrapy/scrapy/commit/8ce01b3b76d4634f55067d6cfdf632ec70ba304a"",""scrapy/downloadermiddlewares/redirect.py"")"
+PyVul4LLMSec_229,CVE-2022-0577,CWE-200,https://github.com/scrapy/scrapy,8ce01b3b76d4634f55067d6cfdf632ec70ba304a,scrapy/downloadermiddlewares/redirect.py,  redirected = request.replace(url=redirected_url),"  redirected = _build_redirect_request(request, url=redirected_url)",,"=HYPERLINK(""https://github.com/scrapy/scrapy/commit/8ce01b3b76d4634f55067d6cfdf632ec70ba304a"",""scrapy/downloadermiddlewares/redirect.py"")"
+PyVul4LLMSec_230,CVE-2022-24737,CWE-200,https://github.com/httpie/httpie,65ab7d5caaaf2f95e61f9dd65441801c2ddee38b,httpie/client.py," httpie_session.remove_cookies(
+                # TODO: take path & domain into account?
+                cookie['name'] for cookie in expired_cookies
+            )",   httpie_session.remove_cookies(expired_cookies),,"=HYPERLINK(""https://github.com/httpie/httpie/commit/65ab7d5caaaf2f95e61f9dd65441801c2ddee38b"",""httpie/client.py"")"
+PyVul4LLMSec_231,CVE-2022-24737,CWE-200,https://github.com/httpie/httpie,65ab7d5caaaf2f95e61f9dd65441801c2ddee38b,httpie/sessions.py,"        jar = RequestsCookieJar()
+        for name, cookie_dict in self['cookies'].items():
+            jar.set_cookie(create_cookie(
+                name, cookie_dict.pop('value'), **cookie_dict))
+        jar.clear_expired_cookies()
+        return jar"," self.cookie_jar.clear_expired_cookies()
+        return self.cookie_jar",,"=HYPERLINK(""https://github.com/httpie/httpie/commit/65ab7d5caaaf2f95e61f9dd65441801c2ddee38b"",""httpie/sessions.py"")"
+PyVul4LLMSec_232,CVE-2022-31185,CWE-200,https://github.com/makedeb/mprweb,d13e3f2f5a9c0b0f6782f35d837090732026ad77,aurweb/routers/accounts.py,"      HideEmail=H,","  HideEmail=hide_email,",,"=HYPERLINK(""https://github.com/makedeb/mprweb/commit/d13e3f2f5a9c0b0f6782f35d837090732026ad77"",""aurweb/routers/accounts.py"")"
+PyVul4LLMSec_233,CVE-2022-21697,CWE-918,https://github.com/jupyterhub/jupyter-server-proxy,fd31930bacd12188c448c886e0783529436b99eb,jupyter_server_proxy/handlers.py,"  context_path = self._get_context_path(host, port)","context_path = self._get_context_path(host, port)",212.0,"=HYPERLINK(""https://github.com/jupyterhub/jupyter-server-proxy/commit/fd31930bacd12188c448c886e0783529436b99eb"",""jupyter_server_proxy/handlers.py"")"
+PyVul4LLMSec_234,CVE-2022-21697,CWE-918,https://github.com/jupyterhub/jupyter-server-proxy,fd31930bacd12188c448c886e0783529436b99eb,jupyter_server_proxy/handlers.py,,"# ensure client_path always starts with '/'
+        if not client_path.startswith(""/""):
+            client_path = ""/"" + client_path",218.0,"=HYPERLINK(""https://github.com/jupyterhub/jupyter-server-proxy/commit/fd31930bacd12188c448c886e0783529436b99eb"",""jupyter_server_proxy/handlers.py"")"
+PyVul4LLMSec_235,CVE-2022-21697,CWE-918,https://github.com/jupyterhub/jupyter-server-proxy,fd31930bacd12188c448c886e0783529436b99eb,jupyter_server_proxy/handlers.py,"    web_app.add_handlers('.*', [
+        (
+            url_path_join(
+                web_app.settings['base_url'],
+                r'/proxy/([^/]*):(\d+)(.*)',"," web_app.add_handlers(
+        "".*"",
+        [
+            (
+                url_path_join(
+                    web_app.settings[""base_url""],
+                    r""/proxy/([^/:@]+):(\d+)(/.*|)"",
+                ),
+                RemoteProxyHandler,
+                {
+                    ""absolute_url"": False,
+                    ""host_allowlist"": host_allowlist,
+                    ""rewrite_response"": rewrite_response,
+                },",,"=HYPERLINK(""https://github.com/jupyterhub/jupyter-server-proxy/commit/fd31930bacd12188c448c886e0783529436b99eb"",""jupyter_server_proxy/handlers.py"")"
+PyVul4LLMSec_236,CVE-2022-21697,CWE-918,https://github.com/jupyterhub/jupyter-server-proxy,fd31930bacd12188c448c886e0783529436b99eb,jupyter_server_proxy/handlers.py,"            RemoteProxyHandler,
+            {
+                'absolute_url': False,
+                'host_allowlist': host_allowlist,
+                'rewrite_response': rewrite_response,
+            }
+        ),
+        (
+            url_path_join(
+                web_app.settings['base_url'],
+                r'/proxy/absolute/([^/]*):(\d+)(.*)',","            (
+                url_path_join(
+                    web_app.settings[""base_url""],
+                    r""/proxy/absolute/([^/:@]+):(\d+)(/.*|)"",
+                ),
+                RemoteProxyHandler,
+                {
+                    ""absolute_url"": True,
+                    ""host_allowlist"": host_allowlist,
+                    ""rewrite_response"": rewrite_response,
+                },",,"=HYPERLINK(""https://github.com/jupyterhub/jupyter-server-proxy/commit/fd31930bacd12188c448c886e0783529436b99eb"",""jupyter_server_proxy/handlers.py"")"
+PyVul4LLMSec_237,CVE-2022-21697,CWE-918,https://github.com/jupyterhub/jupyter-server-proxy,fd31930bacd12188c448c886e0783529436b99eb,jupyter_server_proxy/handlers.py,"    RemoteProxyHandler,
+            {
+                'absolute_url': True,
+                'host_allowlist': host_allowlist,
+                'rewrite_response': rewrite_response,
+            }
+        ),
+        (
+            url_path_join(
+                web_app.settings['base_url'],
+                r'/proxy/(\d+)(.*)',"," (
+                url_path_join(
+                    web_app.settings[""base_url""],
+                    r""/proxy/(\d+)(/.*|)"",
+                ),
+                LocalProxyHandler,
+                {
+                    ""absolute_url"": False,
+                    ""rewrite_response"": rewrite_response,
+                },",,"=HYPERLINK(""https://github.com/jupyterhub/jupyter-server-proxy/commit/fd31930bacd12188c448c886e0783529436b99eb"",""jupyter_server_proxy/handlers.py"")"
+PyVul4LLMSec_238,CVE-2022-21697,CWE-918,https://github.com/jupyterhub/jupyter-server-proxy,fd31930bacd12188c448c886e0783529436b99eb,jupyter_server_proxy/handlers.py," LocalProxyHandler,
+            {
+                'absolute_url': False,
+                'rewrite_response': rewrite_response,
+            },
+        ),
+        (
+            url_path_join(
+                web_app.settings['base_url'],
+                r'/proxy/absolute/(\d+)(.*)',","  (
+                url_path_join(
+                    web_app.settings[""base_url""],
+                    r""/proxy/absolute/(\d+)(/.*|)"",
+                ),
+                LocalProxyHandler,
+                {
+                    ""absolute_url"": True,
+                    ""rewrite_response"": rewrite_response,
+                },",,"=HYPERLINK(""https://github.com/jupyterhub/jupyter-server-proxy/commit/fd31930bacd12188c448c886e0783529436b99eb"",""jupyter_server_proxy/handlers.py"")"
+PyVul4LLMSec_239,CVE-2022-0766,CWE-918,https://github.com/janeczku/calibre-web,965352c8d96c9eae7a6867ff76b0db137d04b0b8,cps/helper.py," if ip.startswith(""127."") or ip.startswith('::ffff:7f') or ip == ""::1"":","if ip.startswith(""127."") or ip.startswith('::ffff:7f') or ip == ""::1"" or ip == ""0.0.0.0"" or ip == ""::"":",,"=HYPERLINK(""https://github.com/janeczku/calibre-web/commit/965352c8d96c9eae7a6867ff76b0db137d04b0b8"",""cps/helper.py"")"
+PyVul4LLMSec_240,CVE-2022-0766,CWE-918,https://github.com/janeczku/calibre-web,965352c8d96c9eae7a6867ff76b0db137d04b0b8,cps/helper.py," img = requests.get(url, timeout=(10, 200))      # ToDo: Error Handling","        img = requests.get(url, timeout=(10, 200), allow_redirects=False)      # ToDo: Error Handling",,"=HYPERLINK(""https://github.com/janeczku/calibre-web/commit/965352c8d96c9eae7a6867ff76b0db137d04b0b8"",""cps/helper.py"")"
+PyVul4LLMSec_241,CVE-2022-0939,CWE-918,https://github.com/janeczku/calibre-web,4545f4a20d9ff90b99bbd4e3e34b6de4441d6367,cps/web.py,"    resp.headers['Content-Security-Policy'] = ""default-src 'self'"" + ''.join([' '+host for host in config.config_trustedhosts.strip().split(',')]) + "" 'unsafe-inline' 'unsafe-eval'; font-src 'self' data:; img-src 'self' data:""
+    if request.endpoint == ""editbook.edit_book"" or config.config_use_google_drive:","  csp = ""default-src 'self'""
+    csp += ''.join([' ' + host for host in config.config_trustedhosts.strip().split(',')])
+    csp += "" 'unsafe-inline' 'unsafe-eval'; font-src 'self' data:; img-src 'self' data:""
+    resp.headers['Content-Security-Policy'] = csp
+    if request.endpoint == ""edit-book.edit_book"" or config.config_use_google_drive:",85.0,"=HYPERLINK(""https://github.com/janeczku/calibre-web/commit/4545f4a20d9ff90b99bbd4e3e34b6de4441d6367"",""cps/web.py"")"
+PyVul4LLMSec_242,CVE-2022-1592,CWE-918,https://github.com/clinical-genomics/scout,b0ef15f4737d0c801154c1991b52ff5cab4f5c83,scout/server/blueprints/alignviewers/controllers.py,"   if key not in [""tracks"", ""custom_tracks"", ""sample_tracks""]:"," if key not in [""tracks"", ""custom_tracks"", ""sample_tracks"", ""cloud_public_tracks""]:",,"=HYPERLINK(""https://github.com/clinical-genomics/scout/commit/b0ef15f4737d0c801154c1991b52ff5cab4f5c83"",""scout/server/blueprints/alignviewers/controllers.py"")"
+PyVul4LLMSec_243,CVE-2022-1592,CWE-918,https://github.com/clinical-genomics/scout,b0ef15f4737d0c801154c1991b52ff5cab4f5c83,scout/server/blueprints/alignviewers/views.py,"    if current_user.is_authenticated is False or file_path not in session.get(""igv_tracks"", []):
+        LOG.warning(f""{file_path} not in {session.get('igv_tracks', [])}"")", if controllers.check_session_tracks(file_path) is False:,,"=HYPERLINK(""https://github.com/clinical-genomics/scout/commit/b0ef15f4737d0c801154c1991b52ff5cab4f5c83"",""scout/server/blueprints/alignviewers/views.py"")"
+PyVul4LLMSec_244,CVE-2022-23071,CWE-918,https://github.com/TandoorRecipes/recipes,d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c,cookbook/integration/cookbookapp.py,"            response = requests.get(images[0])
+                self.import_recipe_image(recipe, BytesIO(response.content))","url = images[0]
+                if validators.url(url, public=True):
+                    response = requests.get(url)
+                    self.import_recipe_image(recipe, BytesIO(response.content))",,"=HYPERLINK(""https://github.com/TandoorRecipes/recipes/commit/d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c"",""cookbook/integration/cookbookapp.py"")"
+PyVul4LLMSec_245,CVE-2022-23071,CWE-918,https://github.com/TandoorRecipes/recipes,d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c,cookbook/integration/cookmate.py,      response = requests.get(recipe_xml.find('imageurl').text.strip())," url = recipe_xml.find('imageurl').text.strip()
+                if validators.url(url, public=True):
+                    response = requests.get(url)",,"=HYPERLINK(""https://github.com/TandoorRecipes/recipes/commit/d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c"",""cookbook/integration/cookmate.py"")"
+PyVul4LLMSec_246,CVE-2022-23071,CWE-918,https://github.com/TandoorRecipes/recipes,d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c,cookbook/integration/recettetek.py,"                    response = requests.get(file['originalPicture'])
+                    if imghdr.what(BytesIO(response.content)) is not None:
+                        self.import_recipe_image(recipe, BytesIO(response.content), filetype=get_filetype(file['originalPicture']))
+                    else:
+                        raise Exception(""Original image failed to download."")","url = file['originalPicture']
+                    if validators.url(url, public=True):
+                        response = requests.get(url)
+                        if imghdr.what(BytesIO(response.content)) is not None:
+                            self.import_recipe_image(recipe, BytesIO(response.content), filetype=get_filetype(file['originalPicture']))
+                        else:
+                            raise Exception(""Original image failed to download."")",,"=HYPERLINK(""https://github.com/TandoorRecipes/recipes/commit/d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c"",""cookbook/integration/recettetek.py"")"
+PyVul4LLMSec_247,CVE-2022-23071,CWE-918,https://github.com/TandoorRecipes/recipes,d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c,cookbook/integration/recipesage.py,"        response = requests.get(file['image'][0])
+                self.import_recipe_image(recipe, BytesIO(response.content))","url = file['image'][0]
+                if validators.url(url, public=True):
+                    response = requests.get(url)
+                    self.import_recipe_image(recipe, BytesIO(response.content))",,"=HYPERLINK(""https://github.com/TandoorRecipes/recipes/commit/d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c"",""cookbook/integration/recipesage.py"")"
+PyVul4LLMSec_248,CVE-2022-23071,CWE-918,https://github.com/TandoorRecipes/recipes,d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c,cookbook/provider/dropbox.py," response = requests.get(recipe.link.replace('www.dropbox.', 'dl.dropboxusercontent.'))"," url = recipe.link.replace('www.dropbox.', 'dl.dropboxusercontent.')
+        if validators.url(url, public=True):
+            response = requests.get(url)",,"=HYPERLINK(""https://github.com/TandoorRecipes/recipes/commit/d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c"",""cookbook/provider/dropbox.py"")"
+PyVul4LLMSec_249,CVE-2022-23071,CWE-918,https://github.com/TandoorRecipes/recipes,d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c,cookbook/provider/nextcloud.py,"       r = requests.get(
+            url,
+            headers=headers,
+            auth=HTTPBasicAuth(
+                recipe.storage.username, recipe.storage.password","if validators.url(url, public=True):
+            r = requests.get(
+                url,
+                headers=headers,
+                auth=HTTPBasicAuth(
+                    recipe.storage.username, recipe.storage.password
+                )",95.0,"=HYPERLINK(""https://github.com/TandoorRecipes/recipes/commit/d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c"",""cookbook/provider/nextcloud.py"")"
+PyVul4LLMSec_250,CVE-2022-23071,CWE-918,https://github.com/TandoorRecipes/recipes,d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c,cookbook/views/api.py,"      response = requests.get(serializer.validated_data['image_url'])
+                    image = File(io.BytesIO(response.content))
+                    filetype = mimetypes.guess_extension(response.headers['content-type']) or filetype","  url = serializer.validated_data['image_url']
+                    if validators.url(url, public=True):
+                        response = requests.get(url)
+                        image = File(io.BytesIO(response.content))
+                        filetype = mimetypes.guess_extension(response.headers['content-type']) or filetype",784.0,"=HYPERLINK(""https://github.com/TandoorRecipes/recipes/commit/d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c"",""cookbook/views/api.py"")"
+PyVul4LLMSec_251,CVE-2022-23071,CWE-918,https://github.com/TandoorRecipes/recipes,d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c,cookbook/views/api.py,"           data = requests.get(url, headers=external_request_headers).content","if validators.url(url, public=True):
+                data = requests.get(url, headers=external_request_headers).content
+            else:
+                return JsonResponse({
+                    'error': True,
+                    'msg': _('Invalid Url')
+                }, status=400)",1191.0,"=HYPERLINK(""https://github.com/TandoorRecipes/recipes/commit/d48fe26a3529cc1ee903ffb2758dfd8f7efaba8c"",""cookbook/views/api.py"")"
+PyVul4LLMSec_252,CVE-2022-31188,CWE-918,https://github.com/cvat-ai/cvat,6fad1764efd922d99dbcda28c4ee72d071aa5a07,cvat/apps/engine/task.py,,         _validate_url(url),255.0,"=HYPERLINK(""https://github.com/cvat-ai/cvat/commit/6fad1764efd922d99dbcda28c4ee72d071aa5a07"",""cvat/apps/engine/task.py"")"
+PyVul4LLMSec_253,CVE-2022-23951,CWE-400,https://github.com/keylime/keylime,6e44758b64b0ee13564fc46e807f4ba98091c355,keylime/cloud_verifier_common.py, agent['mb_refstate']),"        agent['mb_refstate'],
+        compressed=(agent['supported_version'] == ""1.0""))  # TODO: change this to always False after initial update",,"=HYPERLINK(""https://github.com/keylime/keylime/commit/6e44758b64b0ee13564fc46e807f4ba98091c355"",""keylime/cloud_verifier_common.py"")"
+PyVul4LLMSec_254,CVE-2022-23951,CWE-400,https://github.com/keylime/keylime,6e44758b64b0ee13564fc46e807f4ba98091c355,keylime/tenant.py,"        failure = self.tpm_instance.check_quote(AgentAttestState(self.agent_uuid), self.nonce, public_key, quote, self.registrar_data['aik_tpm'], hash_alg=hash_alg)"," failure = self.tpm_instance.check_quote(AgentAttestState(self.agent_uuid), self.nonce, public_key, quote,
+                                                self.registrar_data['aik_tpm'], hash_alg=hash_alg,
+                                                compressed=(self.supported_version == ""1.0""))",,"=HYPERLINK(""https://github.com/keylime/keylime/commit/6e44758b64b0ee13564fc46e807f4ba98091c355"",""keylime/tenant.py"")"
+PyVul4LLMSec_255,CVE-2022-23951,CWE-400,https://github.com/keylime/keylime,6e44758b64b0ee13564fc46e807f4ba98091c355,keylime/tpm/tpm_main.py,"   quote_b64encode = base64.b64encode(zlib.compress(quoteraw))
+         sigraw_b64encode = base64.b64encode(zlib.compress(sigraw))
+    pcrraw_b64encode = base64.b64encode(zlib.compress(pcrraw))","if compress:
+                    quoteraw = zlib.compress(quoteraw)
+                    sigraw = zlib.compress(sigraw)
+                    pcrraw = zlib.compress(pcrraw)
+                quote_b64encode = base64.b64encode(quoteraw)
+                sigraw_b64encode = base64.b64encode(sigraw)
+                pcrraw_b64encode = base64.b64encode(pcrraw)",997.0,"=HYPERLINK(""https://github.com/keylime/keylime/commit/6e44758b64b0ee13564fc46e807f4ba98091c355"",""keylime/tpm/tpm_main.py"")"
+PyVul4LLMSec_256,CVE-2022-23951,CWE-400,https://github.com/keylime/keylime,6e44758b64b0ee13564fc46e807f4ba98091c355,keylime/tpm/tpm_main.py,"        quoteblob = zlib.decompress(base64.b64decode(quote_tokens[0]))
+        sigblob = zlib.decompress(base64.b64decode(quote_tokens[1]))
+        pcrblob = zlib.decompress(base64.b64decode(quote_tokens[2]))","quoteblob = base64.b64decode(quote_tokens[0])
+        sigblob = base64.b64decode(quote_tokens[1])
+        pcrblob = base64.b64decode(quote_tokens[2])
+
+        if compressed:
+            logger.warning(""Decompressing quote data which is unsafe!"")
+            quoteblob = zlib.decompress(quoteblob)
+            sigblob = zlib.decompress(sigblob)
+            pcrblob = zlib.decompress(pcrblob)",1050.0,"=HYPERLINK(""https://github.com/keylime/keylime/commit/6e44758b64b0ee13564fc46e807f4ba98091c355"",""keylime/tpm/tpm_main.py"")"
+PyVul4LLMSec_257,CVE-2022-23951,CWE-400,https://github.com/keylime/keylime,6e44758b64b0ee13564fc46e807f4ba98091c355,keylime/tpm/tpm_main.py,"     retout, success = self._tpm2_checkquote(aikTpmFromRegistrar, quote, nonce, hash_alg)"," retout, success = self._tpm2_checkquote(aikTpmFromRegistrar, quote, nonce, hash_alg, compressed)",1120.0,"=HYPERLINK(""https://github.com/keylime/keylime/commit/6e44758b64b0ee13564fc46e807f4ba98091c355"",""keylime/tpm/tpm_main.py"")"
+PyVul4LLMSec_258,CVE-2022-39280,CWE-400,https://github.com/pyupio/dparse,8c990170bbd6c0cf212f1151e9025486556062d5,dparse/parser.py,"        matches = URL_REGEX.findall(line)
+        if matches:
+            url = matches[0]
+            return url if url.endswith(""/"") else url + ""/""","        groups = re.split(pattern=""[=\s]+"", string=line.strip(), maxsplit=100)
+
+        if len(groups) >= 2:
+            return groups[1] if groups[1].endswith(""/"") else groups[1] + ""/""",,"=HYPERLINK(""https://github.com/pyupio/dparse/commit/8c990170bbd6c0cf212f1151e9025486556062d5"",""dparse/parser.py"")"
+PyVul4LLMSec_259,CVE-2022-45199,CWE-400,https://github.com/python-pillow/Pillow,2444cddab2f83f28687c7c20871574acbb6dbcf3,src/PIL/TiffImagePlugin.py,,"     if samples_per_pixel > MAX_SAMPLESPERPIXEL:
+            # DOS check, samples_per_pixel can be a Long, and we extend the tuple below
+            logger.error(
+                ""More samples per pixel than can be decoded: %s"", samples_per_pixel
+            )
+            raise SyntaxError(""Invalid value for samples per pixel"")",1401.0,"=HYPERLINK(""https://github.com/python-pillow/Pillow/commit/2444cddab2f83f28687c7c20871574acbb6dbcf3"",""src/PIL/TiffImagePlugin.py"")"
+PyVul4LLMSec_260,CVE-2023-28837,CWE-400,https://github.com/wagtail/wagtail,3c0c64642b9e5b8d28b111263c7f4bddad6c3880,wagtail/documents/models.py,   self._set_file_hash(self.file.read()), self._set_file_hash(),,"=HYPERLINK(""https://github.com/wagtail/wagtail/commit/3c0c64642b9e5b8d28b111263c7f4bddad6c3880"",""wagtail/documents/models.py"")"
+PyVul4LLMSec_261,CVE-2023-28837,CWE-400,https://github.com/wagtail/wagtail,3c0c64642b9e5b8d28b111263c7f4bddad6c3880,wagtail/images/models.py,self._set_file_hash(self.file.read()),self._set_file_hash(),,"=HYPERLINK(""https://github.com/wagtail/wagtail/commit/3c0c64642b9e5b8d28b111263c7f4bddad6c3880"",""wagtail/images/models.py"")"
+PyVul4LLMSec_262,CVE-2023-28837,CWE-400,https://github.com/wagtail/wagtail,cfa11bbe00dbe7ce8cd4c0bbfe2a898a690df2bf,wagtail/images/fields.py,"            with open(data.temporary_file_path(), ""rb"") as fh:
+                file = BytesIO(fh.read())",            file = data,,"=HYPERLINK(""https://github.com/wagtail/wagtail/commit/cfa11bbe00dbe7ce8cd4c0bbfe2a898a690df2bf"",""wagtail/images/fields.py"")"
+PyVul4LLMSec_263,CVE-2023-30798,CWE-400,https://github.com/encode/starlette,8c74c2c8dba7030154f8af18e016136bea1938fa,starlette/requests.py,"                    multipart_parser = MultiPartParser(self.headers, self.stream())","multipart_parser = MultiPartParser(
+                        self.headers,
+                        self.stream(),
+                        max_files=max_files,
+                        max_fields=max_fields,
+                    )",,"=HYPERLINK(""https://github.com/encode/starlette/commit/8c74c2c8dba7030154f8af18e016136bea1938fa"",""starlette/requests.py"")"
+PyVul4LLMSec_264,CVE-2022-21699,CWE-269,https://github.com/ipython/ipython,46a51ed69cdf41b4333943d9ceeb945c4ede5668,IPython/__init__.py, return [os.getcwd()],return [],,"=HYPERLINK(""https://github.com/ipython/ipython/commit/46a51ed69cdf41b4333943d9ceeb945c4ede5668"",""IPython/__init__.py"")"
+PyVul4LLMSec_265,CVE-2022-21699,CWE-269,https://github.com/ipython/ipython,46a51ed69cdf41b4333943d9ceeb945c4ede5668,IPython/core/profiledir.py,"    paths = [os.getcwd(), ipython_dir]", paths = [ipython_dir],,"=HYPERLINK(""https://github.com/ipython/ipython/commit/46a51ed69cdf41b4333943d9ceeb945c4ede5668"",""IPython/core/profiledir.py"")"
+PyVul4LLMSec_266,CVE-2022-23604,CWE-269,https://github.com/Twentysix26/x26-Cogs,72dd9323cb4c90f3a5accac7087605375d178246,defender/core/warden/rule.py,"  if msg_obj.channel.permissions_for(issuer).view_channel is False:
+                        raise ExecutionError(""Failed to issue command. The issuer has no permissions ""
+                                             ""to view the destination channel."")","if msg_obj.channel.permissions_for(issuer).view_channel is False:
+                        raise ExecutionError(""Failed to issue command. The issuer has no permissions ""
+                                             ""to view the destination channel."")",,"=HYPERLINK(""https://github.com/Twentysix26/x26-Cogs/commit/72dd9323cb4c90f3a5accac7087605375d178246"",""defender/core/warden/rule.py"")"
+PyVul4LLMSec_267,CVE-2022-3068,CWE-269,https://github.com/octoprint/octoprint,ef95ef1c101b79394f134e8fce000e6bae046571,src/octoprint/plugins/pluginmanager/__init__.py,"     ""roles"": [""manage""],","""roles"": [""list""],",,"=HYPERLINK(""https://github.com/octoprint/octoprint/commit/ef95ef1c101b79394f134e8fce000e6bae046571"",""src/octoprint/plugins/pluginmanager/__init__.py"")"
+PyVul4LLMSec_268,CVE-2023-1326,CWE-269,https://github.com/canonical/apport,e5f78cc89f1f5888b6a56b785dddcb0364c48ecb,apport/ui.py,    } | _get_users_environ(uid)," }
+    if get_user_env:
+        env |= _get_users_environ(uid)",,"=HYPERLINK(""https://github.com/canonical/apport/commit/e5f78cc89f1f5888b6a56b785dddcb0364c48ecb"",""apport/ui.py"")"
+PyVul4LLMSec_269,CVE-2023-1326,CWE-269,https://github.com/canonical/apport,e5f78cc89f1f5888b6a56b785dddcb0364c48ecb,apport/ui.py,"            run_as_real_user([""xdg-open"", url])"," run_as_real_user([""xdg-open"", url], get_user_env=True)",,"=HYPERLINK(""https://github.com/canonical/apport/commit/e5f78cc89f1f5888b6a56b785dddcb0364c48ecb"",""apport/ui.py"")"
+PyVul4LLMSec_270,CVE-2022-4396,CWE-707,https://github.com/RDFLib/pyrdfa3,ffd1d62dd50d5f4190013b39cedcdfbd81f3ce3e,pyRdfa/__init__.py,,"# protection against possible malicious URL call
+                outputFormat = pyRdfa._validate_output_format(outputFormat);",700.0,"=HYPERLINK(""https://github.com/RDFLib/pyrdfa3/commit/ffd1d62dd50d5f4190013b39cedcdfbd81f3ce3e"",""pyRdfa/__init__.py"")"
+PyVul4LLMSec_271,CVE-2022-4396,CWE-707,https://github.com/RDFLib/pyrdfa3,ffd1d62dd50d5f4190013b39cedcdfbd81f3ce3e,pyRdfa/__init__.py,"graph = processor.rdf_from_source(input, outputFormat, rdfOutput = (""forceRDFOutput"" in list(form.keys())) or not htmlOutput)",outputFormat = pyRdfa._validate_output_format(outputFormat);,896.0,"=HYPERLINK(""https://github.com/RDFLib/pyrdfa3/commit/ffd1d62dd50d5f4190013b39cedcdfbd81f3ce3e"",""pyRdfa/__init__.py"")"
+PyVul4LLMSec_272,CVE-2022-4396,CWE-707,https://github.com/RDFLib/pyrdfa3,ffd1d62dd50d5f4190013b39cedcdfbd81f3ce3e,pyRdfa/__init__.py,"	retval +=""<dt>Media Type:</dt><dd>%s</dd>\n"" % media_type","retval +=""<dt>Media Type:</dt><dd>%s</dd>\n"" % cgi.escape(media_type)",905.0,"=HYPERLINK(""https://github.com/RDFLib/pyrdfa3/commit/ffd1d62dd50d5f4190013b39cedcdfbd81f3ce3e"",""pyRdfa/__init__.py"")"
+PyVul4LLMSec_273,CVE-2022-4396,CWE-707,https://github.com/RDFLib/pyrdfa3,ffd1d62dd50d5f4190013b39cedcdfbd81f3ce3e,pyRdfa/__init__.py,"		retval +=""<dt>Requested graphs:</dt><dd>%s</dd>\n"" % form.getfirst(""graph"").lower()","retval +=""<dt>Requested graphs:</dt><dd>%s</dd>\n"" % cgi.escape(form.getfirst(""graph"").lower())",952.0,"=HYPERLINK(""https://github.com/RDFLib/pyrdfa3/commit/ffd1d62dd50d5f4190013b39cedcdfbd81f3ce3e"",""pyRdfa/__init__.py"")"
+PyVul4LLMSec_274,CVE-2022-4396,CWE-707,https://github.com/RDFLib/pyrdfa3,ffd1d62dd50d5f4190013b39cedcdfbd81f3ce3e,pyRdfa/__init__.py,"if ""space_preserve"" in form : retval +=""<dt>Space preserve:</dt><dd> %s</dd>\n"" % form[""space_preserve""].value","if ""space_preserve"" in form : retval +=""<dt>Space preserve:</dt><dd> %s</dd>\n"" % cgi.escape(form[""space_preserve""].value)",954.0,"=HYPERLINK(""https://github.com/RDFLib/pyrdfa3/commit/ffd1d62dd50d5f4190013b39cedcdfbd81f3ce3e"",""pyRdfa/__init__.py"")"
+PyVul4LLMSec_275,CVE-2022-4638,CWE-707,https://github.com/collective/collective.contact.widget,5da36305ca7ed433782be8901c47387406fcda12,src/collective/contact/widget/widgets.py,        return title," return escape(title, quote=True)",,"=HYPERLINK(""https://github.com/collective/collective.contact.widget/commit/5da36305ca7ed433782be8901c47387406fcda12"",""src/collective/contact/widget/widgets.py"")"
+PyVul4LLMSec_276,CVE-2022-4728,CWE-707,https://github.com/graphite-project/graphite-web,2f178f490e10efc03cd1d27c72f64ecab224eb23,webapp/graphite/errors.py,    return HttpResponseBadRequest(escape(msgStr)),  return HttpResponseBadRequest(htmlEscape(msgStr)),,"=HYPERLINK(""https://github.com/graphite-project/graphite-web/commit/2f178f490e10efc03cd1d27c72f64ecab224eb23"",""webapp/graphite/errors.py"")"
+PyVul4LLMSec_277,CVE-2022-0845,CWE-94,https://github.com/pytorchlightning/pytorch-lightning,8b7a12c52e52a06408e9231647839ddb4665e8ae,pytorch_lightning/utilities/argparse.py,    val = eval(val), val = literal_eval(val),,"=HYPERLINK(""https://github.com/pytorchlightning/pytorch-lightning/commit/8b7a12c52e52a06408e9231647839ddb4665e8ae"",""pytorch_lightning/utilities/argparse.py"")"
+PyVul4LLMSec_278,CVE-2022-29216,CWE-94,https://github.com/tensorflow/tensorflow,8b202f08d52e8206af2bdb2112a62fafbc546ec7,tensorflow/python/tools/saved_model_cli.py,"    # ast.literal_eval does not work with numpy expressions
+    input_dict[input_key] = eval(expr)  # pylint: disable=eval-used"," if safe:
+      try:
+        input_dict[input_key] = ast.literal_eval(expr)
+      except:
+        raise RuntimeError(
+            f'Expression ""{expr}"" is not a valid python literal.')
+    else:
+      # ast.literal_eval does not work with numpy expressions
+      input_dict[input_key] = eval(expr)  # pylint: disable=eval-used",,"=HYPERLINK(""https://github.com/tensorflow/tensorflow/commit/8b202f08d52e8206af2bdb2112a62fafbc546ec7"",""tensorflow/python/tools/saved_model_cli.py"")"
+PyVul4LLMSec_279,CVE-2022-29216,CWE-94,https://github.com/tensorflow/tensorflow,8b202f08d52e8206af2bdb2112a62fafbc546ec7,tensorflow/python/tools/saved_model_cli.py,  input_exprs = preprocess_input_exprs_arg_string(input_exprs_str),"input_exprs = preprocess_input_exprs_arg_string(input_exprs_str, safe=False)",,"=HYPERLINK(""https://github.com/tensorflow/tensorflow/commit/8b202f08d52e8206af2bdb2112a62fafbc546ec7"",""tensorflow/python/tools/saved_model_cli.py"")"
+PyVul4LLMSec_280,CVE-2022-3179,CWE-521,https://github.com/ikus060/rdiffweb,233befc33bdc45d4838c773d5aed4408720504c5,rdiffweb/controller/page_admin.py,   password = PasswordField(_('Password'))," password = PasswordField(_('Password'), validators=[validators.optional()])",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/233befc33bdc45d4838c773d5aed4408720504c5"",""rdiffweb/controller/page_admin.py"")"
+PyVul4LLMSec_281,CVE-2022-3179,CWE-521,https://github.com/ikus060/rdiffweb,233befc33bdc45d4838c773d5aed4408720504c5,rdiffweb/core/store.py,," cfg = self._store.app.cfg
+        if cfg.password_min_length > len(password) > cfg.password_max_length:
+            raise ValueError(""invalid password length"")",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/233befc33bdc45d4838c773d5aed4408720504c5"",""rdiffweb/core/store.py"")"
+PyVul4LLMSec_282,CVE-2022-3326,CWE-521,https://github.com/ikus060/rdiffweb,ee98e5af78ec60db8a17fef6ea0ca250e3f31eec,rdiffweb/core/store.py,,"# Check password length
+        cfg = self._store.app.cfg
+        if cfg.password_min_length > len(password) or len(password) > cfg.password_max_length:
+            raise ValueError(
+                _('Password must have between %(min)d and %(max)d characters.')
+                % {'min': cfg.password_min_length, 'max': cfg.password_max_length}
+            )
+
+        # Verify password score using zxcvbn
+        stats = zxcvbn(password)
+        if stats.get('score') < cfg.password_score:
+            msg = _('Password too weak.')
+            warning = stats.get('feedback', {}).get('warning')
+            suggestions = stats.get('feedback', {}).get('suggestions')
+            if warning:
+                msg += ' ' + warning
+            if suggestions:
+                msg += ' ' + ' '.join(suggestions)
+            raise ValueError(msg)",410.0,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/ee98e5af78ec60db8a17fef6ea0ca250e3f31eec"",""rdiffweb/core/store.py"")"
+PyVul4LLMSec_283,CVE-2022-3376,CWE-521,https://github.com/ikus060/rdiffweb,2ffc2af65c8f8113b06e0b89929c604bcdf844b9,rdiffweb/controller/page_pref_general.py,               password_form.populate_obj(self.app.currentuser),"              if password_form.populate_obj(self.app.currentuser):
+                    flash(_(""Password updated successfully.""), level='success')
+                    raise cherrypy.HTTPRedirect("""")",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/2ffc2af65c8f8113b06e0b89929c604bcdf844b9"",""rdiffweb/controller/page_pref_general.py"")"
+PyVul4LLMSec_284,CVE-2023-2160,CWE-521,https://github.com/modoboa/modoboa,130257c96a2392ada795785a91178e656e27015c,modoboa/core/forms.py,,"        elif newpassword or confirmation:
+            if not confirmation:
+                self.add_error(""confirmation"", _(""This field is required.""))
+            else:
+                self.add_error(""newpassword"", _(""This field is required.""))",,"=HYPERLINK(""https://github.com/modoboa/modoboa/commit/130257c96a2392ada795785a91178e656e27015c"",""modoboa/core/forms.py"")"
+PyVul4LLMSec_285,CVE-2022-3376,CWE-521,https://github.com/ikus060/rdiffweb,2ffc2af65c8f8113b06e0b89929c604bcdf844b9,rdiffweb/controller/page_pref_general.py,"            flash(_(""Wrong current password.""), level='warning')
+        else:
+            # Clear number of attempts
+            if CHANGE_PASSWORD_ATTEMPTS in cherrypy.session:
+                del cherrypy.session[CHANGE_PASSWORD_ATTEMPTS]
+            # If Valid, update password
+            try:
+                user.set_password(self.new.data)
+                flash(_(""Password updated successfully.""), level='success')
+            except ValueError as e:
+                flash(str(e), level='warning')"," self.current.errors = [_(""Wrong current password."")]
+            return False
+
+        # Clear number of attempts
+        if CHANGE_PASSWORD_ATTEMPTS in cherrypy.session:
+            del cherrypy.session[CHANGE_PASSWORD_ATTEMPTS]
+
+        try:
+            user.set_password(self.new.data)
+            return True
+        except ValueError as e:
+            self.new.errors = [str(e)]
+            return False",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/2ffc2af65c8f8113b06e0b89929c604bcdf844b9"",""rdiffweb/controller/page_pref_general.py"")"
+PyVul4LLMSec_286,CVE-2022-0932,CWE-285,https://github.com/saleor/saleor,521dfd6394f3926a77c60d8633c058e16d0f916d,saleor/graphql/account/types.py,"          orders = list(
+                    filter(lambda order: order.status != OrderStatus.DRAFT, orders)
+                )","                # allow fetch requestor orders (except drafts)
+                if root == info.context.user:
+                    orders = list(
+                        filter(lambda order: order.status != OrderStatus.DRAFT, orders)
+                    )
+                else:
+                    raise PermissionDenied()",,"=HYPERLINK(""https://github.com/saleor/saleor/commit/521dfd6394f3926a77c60d8633c058e16d0f916d"",""saleor/graphql/account/types.py"")"
+PyVul4LLMSec_287,CVE-2022-31168,CWE-285,https://github.com/zulip/zulip,751b2a03e565e9eb02ffe923b7c24ac73d604034,zerver/views/users.py,,"elif not user_profile.is_realm_admin:
+            raise OrganizationAdministratorRequired()",,"=HYPERLINK(""https://github.com/zulip/zulip/commit/751b2a03e565e9eb02ffe923b7c24ac73d604034"",""zerver/views/users.py"")"
+PyVul4LLMSec_288,CVE-2022-31168,CWE-285,https://github.com/zulip/zulip,751b2a03e565e9eb02ffe923b7c24ac73d604034,zerver/views/users.py,,"elif not user_profile.is_realm_admin:
+            raise OrganizationAdministratorRequired()",,"=HYPERLINK(""https://github.com/zulip/zulip/commit/751b2a03e565e9eb02ffe923b7c24ac73d604034"",""zerver/views/users.py"")"
+PyVul4LLMSec_289,CVE-2023-2227,CWE-285,https://github.com/modoboa/modoboa,7bcd3f6eb264d4e3e01071c97c2bac51cdd6fe97,modoboa/core/api/v2/views.py,,"
+    permission_classes = [permissions.IsAuthenticated, IsSuperUser]",,"=HYPERLINK(""https://github.com/modoboa/modoboa/commit/7bcd3f6eb264d4e3e01071c97c2bac51cdd6fe97"",""modoboa/core/api/v2/views.py"")"
+PyVul4LLMSec_290,CVE-2023-2227,CWE-285,https://github.com/modoboa/modoboa,7bcd3f6eb264d4e3e01071c97c2bac51cdd6fe97,modoboa/parameters/api/v2/viewsets.py,," permission_classes = [permissions.IsAuthenticated, IsSuperUser]",,"=HYPERLINK(""https://github.com/modoboa/modoboa/commit/7bcd3f6eb264d4e3e01071c97c2bac51cdd6fe97"",""modoboa/parameters/api/v2/viewsets.py"")"
+PyVul4LLMSec_291,CVE-2022-36436,CWE-287,https://github.com/osuosl/twisted_vncauthproxy,edc149af29242178091b2d6fcd42c3ef0851644b,vncap/vnc/protocol.py,"           # Hardcoded: 2 security types: None and VNC Auth.
+            self.transport.write(""\x02\x01\x02"")","            # Hardcoded: 1 security type: VNC Auth.
+            self.transport.write(""\x01\x02"")",,"=HYPERLINK(""https://github.com/osuosl/twisted_vncauthproxy/commit/edc149af29242178091b2d6fcd42c3ef0851644b"",""vncap/vnc/protocol.py"")"
+PyVul4LLMSec_292,CVE-2022-39254,CWE-287,https://github.com/poljar/matrix-nio,b1cbf234a831daa160673defd596e6450e9c29f0,nio/crypto/olm_machine.py,"            return None
+
+        if event.session_id not in self.outgoing_key_requests:","return False
+        elif event.session_id not in self.outgoing_key_requests:",1195.0,"=HYPERLINK(""https://github.com/poljar/matrix-nio/commit/b1cbf234a831daa160673defd596e6450e9c29f0"",""nio/crypto/olm_machine.py"")"
+PyVul4LLMSec_293,CVE-2022-39254,CWE-287,https://github.com/poljar/matrix-nio,b1cbf234a831daa160673defd596e6450e9c29f0,nio/crypto/olm_machine.py,    key_request = self.outgoing_key_requests.pop(key_request.request_id),key_request = self.outgoing_key_requests.pop(event.session_id),1244.0,"=HYPERLINK(""https://github.com/poljar/matrix-nio/commit/b1cbf234a831daa160673defd596e6450e9c29f0"",""nio/crypto/olm_machine.py"")"
+PyVul4LLMSec_231,CVE-2022-24737,CWE-200,https://github.com/httpie/httpie,65ab7d5caaaf2f95e61f9dd65441801c2ddee38b,httpie/sessions.py,if os.path.sep in session_name:,"  bound_hostname = host or url_as_host(url)
+    if not bound_hostname:
+        # HACK/FIXME: httpie-unixsocket's URLs have no hostname.
+        bound_hostname = 'localhost'
+
+    # host:port => host_port
+    hostname = bound_hostname.replace(':', '_')
+    if is_anonymous_session(session_name):",,"=HYPERLINK(""https://github.com/httpie/httpie/commit/65ab7d5caaaf2f95e61f9dd65441801c2ddee38b"",""httpie/sessions.py"")"
+PyVul4LLMSec_206,CVE-2022-4723,CWE-770,https://github.com/ikus060/rdiffweb,6e9ee210548f6d3210704cac302cfc7cdb239765,rdiffweb/controller/page_pref_mfa.py, token = (request.login or request.remote.ip) + '.' + (scope or request.path_info)," identifier = request.remote.ip
+    if hasattr(cherrypy.serving, 'session') and cherrypy.serving.session.get('_cp_username', None):
+        identifier = cherrypy.serving.session.get('_cp_username', None)
+    token = identifier + '.' + (scope or request.path_info)",,"=HYPERLINK(""https://github.com/ikus060/rdiffweb/commit/6e9ee210548f6d3210704cac302cfc7cdb239765"",""rdiffweb/controller/page_pref_mfa.py"")"
