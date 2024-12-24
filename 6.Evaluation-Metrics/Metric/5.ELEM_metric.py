@@ -13,17 +13,6 @@ def get_diff_lists(list1,list2):
         if item not in list2:
             difference_result.append(item)
     return difference_result
-#
-# ans_list = ["abc", "def", "aaaaaaa", "cccccccccccc"]
-# gen_list = ["abc", "df", "aaaaa", "cccccccccccc"]
-# def weight(gen_list, ele):
-#     from collections import Counter
-#     gen_rep_dict = dict(Counter(gen_list))
-#     keys = list(gen_rep_dict.keys())
-#     weight = 0
-#     if ele in keys:
-#         weight = gen_rep_dict[ele] / len(gen_list)
-#     return weight
 
 #####################################For punctuation category #########################################################
 
@@ -209,34 +198,6 @@ def get_n_gram_lists(n,elems):
     return pairs
 
 
-
-
-
-# def get_ave_len(list):
-#     length=[]
-#     for l in list:
-#         one_str = ''.join(l)
-#         length.append(len(one_str))
-#     avg_length=sum(length)/len(list)
-#     print(length)
-#     print(avg_length)
-#     return
-# ll=get_n_gram_lists(6,["1111","222222","33333","444","55555","66666","22222","11","3333","4","5"])
-# print(get_ave_len(ll))
-# def to_ordered_list2(statement):
-#     statement=str(statement)
-#     statement=statement.replace('\n', '').split(" ")
-#     statement_list=[]
-#     # print(statement)
-#     for i in statement:
-#         i=str(i)
-#         for j in i:
-#             if j in string.punctuation:
-#                 i=i.replace(j, "*" + j + "*")
-#         ele = i.split("*")
-#         ele = [i for i in ele if i != '']
-#         statement_list.extend(ele)
-
 def to_ordered_list(statement):
     statement=str(statement)
     statement=statement.replace('\n', '').split(" ")
@@ -326,7 +287,6 @@ def convert_to_for_compare(patch, gene):
     patch_str= ' '.join([str(elem) for elem in patch_List])
 
     gen_str=' '.join([str(elem) for elem in gene_list])
-    print("88888888888888888888888888888888888888888888")
     print(patch_List)
     print(gene_list)
     print(patch_str)
@@ -392,21 +352,11 @@ def get_lex_punc_num_op_list(statement_list):
 
 # def get_ELEM_n_gram(a_statement_list,g_statement_list,n_gram):
 def get_ELEM(a_punc,g_punc,a_lexicon,g_lexicon,n_gram):
-    # print("111-----get_ELEM------")
-    # print(a_lexicon)
-    # print(a_punc)
-    # print(g_lexicon)
-    # print(g_punc)
-    # print("222-----get_ELEM------")
-    # a_lexicon, a_punc, a_number, a_operators=get_lex_punc_num_op_list(a_statement_list)
-    # g_lexicon, g_punc, g_number, g_operators = get_lex_punc_num_op_list(g_statement_list)
-
     g_n_gram_lexicon = get_n_gram_lists(n_gram, g_lexicon)
     g_n_gram_punc = get_n_gram_lists(n_gram, g_punc)
 
     a_n_gram_lexicon = get_n_gram_lists(n_gram, a_lexicon)
     a_n_gram_punc = get_n_gram_lists(n_gram, a_punc)
-    #
     # a_lexicon, a_punc, a_number, a_operators=get_lex_punc_num_op_list(a_statement_list)
     # g_lexicon, g_punc, g_number, g_operators=get_lex_punc_num_op_list(g_statement_list)
 
@@ -415,7 +365,6 @@ def get_ELEM(a_punc,g_punc,a_lexicon,g_lexicon,n_gram):
     beta=1
     # beta=0.5
     lambda_p=0.1
-    print("999999999999999999999999999999")
     print(a_punc)
     print(g_punc)
     # for lexical category
@@ -494,7 +443,6 @@ def collect_fixed_unfixed():
 
     for sheet in gen_code_sheetnames:
     # for sheet in after_trans_sheetnames:
-        print("8888888888888888888888888888888888888888888")
         print(sheet)
         df = pd.read_excel(generated_code, sheet_name=sheet)
         # df = pd.read_excel(generated_code_after_trans, sheet_name=sheet)
@@ -524,7 +472,6 @@ def collect_fixed_unfixed():
 
                 if len(str(c2_g))>2 and str(c2_g)!='nan' and len(g_lexicon)!=0:
                     if c2>0:
-                        print("cccccccfixed1111111")
                         print(c2_g)
                         # print("ccccccc1111111"+str(len(a_lexicon)))
                         # print(id)
@@ -548,7 +495,6 @@ def collect_fixed_unfixed():
                         c2_fixed_CODEBLUE[key]=code_bleu['codebleu']
 
                     if c2==0:
-                        print("cccccccunfixed0000000")
                         print(c2_g)
                         BLEU2 = get_BLEU( a_statement_list,g_statement_list)
                         GLEU2 =  get_GLEU( a_statement_list,g_statement_list)
@@ -567,7 +513,6 @@ def collect_fixed_unfixed():
                         # print("code_bleu2['codebleu']",code_bleu2['codebleu'])
                         # print("ELEM2",ELEM2)
 
-    print("**********************************")
 
     # print(len((list(c1_fixed_BLEU.keys()))))#98     #52          #43     #69
     # print(sum(list(c1_fixed_BLEU.values())))#67.27  #32.01     #26.01  #46.97
@@ -625,67 +570,3 @@ def collect_fixed_unfixed():
     return
 collect_fixed_unfixed()
 
-#
-
-# def iterator():
-#     generated_code = pd.ExcelFile("D:/000_PHD_project/analyzer/Dataset/code_no_trans.xlsx")
-#     generated_code_after_trans=pd.ExcelFile("D:/000_PHD_project/analyzer/Dataset/code_trans.xlsx")
-#     gen_code_sheetnames =  generated_code.sheet_names
-#     after_trans_sheetnames=generated_code_after_trans.sheet_names
-#     print(gen_code_sheetnames)
-#     print(after_trans_sheetnames)
-#     models=["Copilot","CodeGeex","codeLLAMA 7b","Starcoder2 7b"]
-#
-#
-#     for sheet in gen_code_sheetnames:
-#         df = pd.read_excel(generated_code, sheet_name=sheet)
-#         alpha=2
-#         beta = 1
-#         lambda_p=0.5
-#         for index in df.index:
-#             patch_a = df['patch+'].loc[index]
-#             gene=df['Copilot'].loc[index]
-#
-#             if len(str(gene))>4:
-#                 print(patch_a)
-#                 print(gene)
-#                 print("aaa")
-#
-#                 patch_con,gene_con=convert_to_for_compare(patch_a,gene)
-#
-#                 print(patch_con)
-#                 print(gene_con)
-#                 print("8888888888888888888888888888888")
-#                 # g_statement_list, g_lexicon, g_punc, g_number, g_operators=to_ordered_list(copilot_gen_code)
-#                 # a_statement_list, a_lexicon, a_punc, a_number, a_operators = to_ordered_list(patch_a)
-#                 #
-#                 # # for lexical category
-#                 # gen_precision=get_precision(a_lexicon, g_lexicon,alpha)
-#                 # gen_recall=get_recall(a_lexicon, g_lexicon,alpha)
-#                 # f_beta=get_f_beta(beta,gen_precision,gen_recall)
-#                 # print("precision,recall,f_0.5")
-#                 # print(gen_precision)
-#                 # print(gen_recall)
-#                 # print(f_beta)
-#
-#                 # for punctuation category
-#                 # p_gen_precision = get_precision_pun(a_lexicon, g_lexicon, lambda_p)
-#                 # p_gen_recall = get_recall_pun(a_lexicon, g_lexicon, alpha)
-#                 # p_f_beta = get_f_beta(beta, p_gen_precision, p_gen_recall)
-#                 # print("p_gen_precision")
-#                 # print(p_gen_precision)
-#                 # print(p_gen_recall)
-#                 # print(p_f_beta)
-#
-#                 # average_precision=(p_gen_precision+gen_precision)/2
-#                 # average_recall=(p_gen_recall+gen_recall)/2
-#                 # print(order_gen)
-#                 # average_f_beta= get_f_beta(beta, average_precision, average_recall)
-#                 # print("average precision, recall, f")
-#                 # print(average_precision)
-#                 # print(average_recall)
-#                 # print(average_f_beta)
-#                 # time.sleep(10)
-#             else:
-#                 averg=0
-# iterator()
